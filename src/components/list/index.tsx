@@ -12,7 +12,6 @@ function List({ className, itemClassName, data }: Props) {
   const items = data.map(item => 
     <li
       key={item.id}
-      // className={item.isFruit ? 'magenta' : 'darkgreen'}
       className={itemClassName}
     >
       {item.title}

@@ -1,0 +1,25 @@
+.base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.medium {
+  &-square {
+    width: 2rem;
+    height: 2rem;
+    font-size: medium;
+  }
+}
+
+.hollow {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: grey;
+
+  &:hover {
+    background-color: #ccc;
+    color: black;
+  }
+}

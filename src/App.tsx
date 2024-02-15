@@ -5,6 +5,12 @@ import React, { useState, useEffect } from 'react';
 import Avatar from './components/avatar';
 import Button from './components/button';
 import List from './components/list';
+import Board from './components/board';
+
+// interface squareProps {
+//   value?: string;
+//   onClick?: React.MouseEventHandler<HTMLElement>;
+// }
 
 const user = {
   name: 'Leo Dao',
@@ -18,6 +24,10 @@ const products = [
   { title: 'Apple', isFruit: true, id: 3 },
 ];
 
+// function Square({ value, onClick }: squareProps) {
+//   return <Button className="button" label={value} onClick={onClick} />
+// }
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   let content;
@@ -26,7 +36,7 @@ function App() {
     setIsLoggedIn()
   }, [isLoggedIn]);
 
-  if(isLoggedIn){
+  if (isLoggedIn) {
     content = 'Is Login';
   } else {
     content = <Button label={`Login`} title="Click to login" />;
@@ -45,7 +55,7 @@ function App() {
       </div>
       <h1>Vite + React</h1> */}
       <div className="card">
-        <Button onClick={() => setCount((count) => count + 1)} label={`Count is ${count}`} title="click to count"/>
+        <Button onClick={() => setCount((count) => count + 1)} label={`Count is ${count}`} title="click to count" />
         {/* <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p> */}
@@ -57,6 +67,7 @@ function App() {
       {content}
       <Avatar title={user.name} src={user.imageUrl} alt={user.name} />
       <List className="list" itemClassName="list__item" data={products} />
+      {/* <Board cols={16} rows={22} /> */}
     </>
   )
 }
