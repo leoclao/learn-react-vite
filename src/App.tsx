@@ -5,7 +5,8 @@ import React, { useState, useEffect } from 'react';
 import Avatar from './components/avatar';
 import Button from './components/button';
 import List from './components/list';
-import Board from './components/board';
+import FilterableProduct from './product';
+// import Board from './components/board';
 
 // interface squareProps {
 //   value?: string;
@@ -27,6 +28,15 @@ const products = [
 // function Square({ value, onClick }: squareProps) {
 //   return <Button className="button" label={value} onClick={onClick} />
 // }
+
+const PRODUCTS_LIST = [
+  {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
+  {category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit"},
+  {category: "Fruits", price: "$2", stocked: false, name: "Passionfruit"},
+  {category: "Vegetables", price: "$2", stocked: true, name: "Spinach"},
+  {category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin"},
+  {category: "Vegetables", price: "$1", stocked: true, name: "Peas"}
+];
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -68,6 +78,8 @@ function App() {
       <Avatar title={user.name} src={user.imageUrl} alt={user.name} />
       <List className="list" itemClassName="list__item" data={products} />
       {/* <Board cols={16} rows={22} /> */}
+      {/* <FilterableProduct products={products} /> */}
+      <FilterableProduct products={PRODUCTS_LIST} />
     </>
   )
 }
