@@ -1,21 +1,16 @@
 interface Props {
-  className?: string;
-  src: string;
-  title: string;
+	className?: string;
+	src: string;
+	title: string;
 }
 
 function Avatar({ className, src, title }: Props) {
-
-  return (
-    <div>
-      <div>{title}</div>
-      <img
-        className={className}
-        src={src}
-        alt={'Photo at ' + title}
-      />
-    </div>
-  );
+	return (
+		<div>
+			<div>{title}</div>
+			<img className={className} src={src} alt={title} />
+		</div>
+	);
 }
 
 export default Avatar;
