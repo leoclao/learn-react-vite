@@ -6,27 +6,27 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "biome format --write src",
+    "lint": "biome lint src",
+    "check": "biome check src",
+    "fix": "biome fix format --write src",
     "preview": "vite preview"
   },
   "dependencies": {
     "clsx": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-error-boundary": "^4.0.12",
-    "react-hook-form": "^7.50.0",
-    "sass": "^1.69.7"
+    "react-error-boundary": "^4.0.13",
+    "react-hook-form": "^7.51.0",
+    "react-responsive": "^9.0.2",
+    "sass": "^1.71.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.18",
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0",
+    "@biomejs/biome": "1.5.3",
+    "@types/react": "^18.2.62",
+    "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.56.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.3.3",
-    "vite": "^5.0.11"
+    "vite": "^5.1.5"
   }
 }

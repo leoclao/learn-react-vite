@@ -2,9 +2,9 @@ import { useState } from "react";
 import clsx from "clsx";
 import Board from "./Board";
 import SearchBar from "./SearchBar";
-import styles from "./../styles/modules/product.module.scss";
+import styles from "./../styles/modules/profile.module.scss";
 
-function FilterableProduct({ products }) {
+function Profile({ products }) {
 	const [filterText, setFilterText] = useState("");
 	const [inStockOnly, setInStockOnly] = useState(false);
 	return (
@@ -24,4 +24,4 @@ function FilterableProduct({ products }) {
 	);
 }
 
-export default FilterableProduct;
+export default Profile;
