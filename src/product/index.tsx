@@ -1,8 +1,8 @@
-import { useState } from "react";
 import clsx from "clsx";
+import { useState } from "react";
+import styles from "./../styles/modules/product.module.scss";
 import Board from "./Board";
 import SearchBar from "./SearchBar";
-import styles from "./../styles/modules/product.module.scss";
 
 function FilterableProduct({ products }) {
 	const [filterText, setFilterText] = useState("");

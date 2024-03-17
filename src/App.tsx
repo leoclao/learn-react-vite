@@ -5,7 +5,9 @@ import React, { useState, useEffect } from "react";
 import Avatar from "./components/avatar";
 import Button from "./components/button";
 import List from "./components/list";
+import Container from "./container";
 import FilterableProduct from "./product";
+import Profile from "./profile";
 // import Board from './components/board';
 
 // interface squareProps {
@@ -31,8 +33,8 @@ const products = [
 
 const PRODUCTS_LIST = [
 	{ category: "Fruits", price: "$1", stocked: true, name: "Apple" },
-	{ category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
-	{ category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
+	{ category: "Fruits", price: "$1", stocked: true, name: "Dragon fruit" },
+	{ category: "Fruits", price: "$2", stocked: false, name: "Passion fruit" },
 	{ category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
 	{ category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
 	{ category: "Vegetables", price: "$1", stocked: true, name: "Peas" },
@@ -54,7 +56,7 @@ function App() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<>
+		<Container type="FLUID">
 			{/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -84,7 +86,8 @@ function App() {
 			{/* <Board cols={16} rows={22} /> */}
 			{/* <FilterableProduct products={products} /> */}
 			<FilterableProduct products={PRODUCTS_LIST} />
-		</>
+			<Profile />
+		</Container>
 	);
 }
 

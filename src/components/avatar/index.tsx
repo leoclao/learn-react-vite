@@ -1,14 +1,14 @@
 interface Props {
 	className?: string;
+	imgClassName?: string;
 	src: string;
-	title: string;
+	desc: string;
 }
 
-function Avatar({ className, src, title }: Props) {
+function Avatar({ className, imgClassName, src, desc }: Props) {
 	return (
-		<div>
-			<div>{title}</div>
-			<img className={className} src={src} alt={title} />
+		<div className={className}>
+			<img className={imgClassName} src={src} alt={desc} />
 		</div>
 	);
 }

@@ -1,25 +1,21 @@
-import { useState } from "react";
 import clsx from "clsx";
-import Board from "./Board";
-import SearchBar from "./SearchBar";
+import { useState } from "react";
+import Avatar from "../components/avatar";
 import styles from "./../styles/modules/profile.module.scss";
 
-function Profile({ products }) {
+interface Props {
+	className?: string;
+	avatarClassName?: string;
+	avatarImgClassName?: string;
+	desc: string;
+}
+
+function Profile({ className, avatarClassName, avatarImgClassName }: Props) {
 	const [filterText, setFilterText] = useState("");
 	const [inStockOnly, setInStockOnly] = useState(false);
 	return (
 		<div className={clsx(styles.filterable)}>
-			<SearchBar
-				filterText={filterText}
-				inStockOnly={inStockOnly}
-				onFilterTextChange={setFilterText}
-				onInStockOnlyChange={setInStockOnly}
-			/>
-			<Board
-				products={products}
-				filterText={filterText}
-				inStockOnly={inStockOnly}
-			/>
+			<Avatar />
 		</div>
 	);
 }
