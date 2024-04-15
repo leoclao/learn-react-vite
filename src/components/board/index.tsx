@@ -1,8 +1,8 @@
-import React, { useState } from "react";
 import clsx from "clsx";
-import styles from "./../../styles/modules/board.module.scss";
-import Grid from "../grid";
+import React, { useState } from "react";
 import Button from "../button";
+import Grid from "../grid";
+import styles from "./../../styles/modules/board.module.scss";
 // import Message from "../message";
 
 interface Props {
