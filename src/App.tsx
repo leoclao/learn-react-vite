@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { info } from "sass";
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
 import Avatar from "./components/avatar";
 import Button from "./components/button";
+import Grid from "./components/grid";
 import List from "./components/list";
 import Container from "./container";
-import FilterableProduct from "./product";
-import Profile from "./profile";
+import FilterableProduct from "./features/product";
+import Profile from "./features/profile";
 // import Board from './components/board';
 
 // interface squareProps {
@@ -15,11 +17,52 @@ import Profile from "./profile";
 //   onClick?: React.MouseEventHandler<HTMLElement>;
 // }
 
-const user = {
-	name: "Leo Dao",
-	imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
-	imageSize: 90,
-};
+const users = [
+	{
+		id: 1,
+		fullName: "Jackie Dao",
+		nickName: "JD",
+		avatar: "https://i.imgur.com/yXOvdOSs.jpg",
+		avatarSize: 90,
+		info: [
+			{
+				id: 1,
+				label: "email",
+				value: "daoxuannhut@gmail.com",
+				isPrimary: true,
+			},
+			{
+				id: 1,
+				label: "email",
+				value: "daoxuannhut@gmail.com",
+				isPrimary: false,
+			},
+			{ id: 1, label: "phone", value: "0123456789", isPrimary: true },
+			{ id: 1, label: "phone", value: "0123456789", isPrimary: false },
+			{
+				id: 1,
+				label: "address",
+				value: "Ho Chi Minh, Viet Nam",
+				isPrimary: true,
+			},
+			{ id: 1, label: "DOB", value: "01/01/2000" },
+			{
+				id: 1,
+				label: "description",
+				value:
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			},
+		],
+	},
+	{
+		id: 2,
+		fullName: "Jackie Dao",
+		nickName: "JD",
+		avatar: "https://i.imgur.com/yXOvdOSs.jpg",
+		avatarSize: 90,
+		info: null,
+	},
+];
 
 const products = [
 	{ title: "Cabbage", isFruit: false, id: 1 },
@@ -81,12 +124,20 @@ function App() {
       </p>
       <h1>Welcome to my app</h1> */}
 			{content}
-			<Avatar title={user.name} src={user.imageUrl} alt={user.name} />
+			{/* <Avatar title={user.name} src={user.imageUrl} alt={user.name} /> */}
 			<List className="list" itemClassName="list__item" data={products} />
 			{/* <Board cols={16} rows={22} /> */}
 			{/* <FilterableProduct products={products} /> */}
 			<FilterableProduct products={PRODUCTS_LIST} />
-			<Profile />
+			{users && (
+				<Container>
+					<Grid cols={4}>
+						{users.map((user) => (
+							<Profile key={user.id} profileData={user} />
+						))}
+					</Grid>
+				</Container>
+			)}
 		</Container>
 	);
 }

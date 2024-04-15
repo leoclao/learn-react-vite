@@ -1,5 +1,6 @@
 import clsx from "clsx";
-import type React from "react";
+// import type React from "react";
+import { useId } from "react";
 
 import styles from "./../../styles/modules/grid.module.scss";
 
@@ -10,6 +11,7 @@ interface Props {
 }
 
 function Grid({ cols = "none", gap = "gap", children }: Props) {
+	const uniqueId = useId();
 	const newGapClass = `-${gap}`;
 	const newColClass = `-${cols}`;
 
@@ -19,7 +21,11 @@ function Grid({ cols = "none", gap = "gap", children }: Props) {
 		!!cols && styles[`grid-cols${newColClass}`],
 	);
 
-	return <div className={className}>{children}</div>;
+	return (
+		<div key={uniqueId} className={className}>
+			{children}
+		</div>
+	);
 }
 
 export default Grid;

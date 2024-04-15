@@ -34,10 +34,10 @@
         "src/container/*"
       ],
       "@product/*": [
-        "src/product/*"
+        "src/features/product/*"
       ],
       "@profile/*": [
-        "src/profile/*"
+        "src/features/profile/*"
       ],
       "@styles/*": [
         "src/styles/*"
