@@ -1,8 +1,7 @@
 import clsx from "clsx";
-// import type React from "react";
 import { useId } from "react";
 
-import styles from "./../../styles/modules/grid.module.scss";
+import styles from "@/styles/modules/grid.module.scss";
 
 interface Props {
 	cols: string;

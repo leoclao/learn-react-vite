@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import type React from "react";
 
-import styles from "./../../styles/modules/button.module.scss";
+import styles from "@/styles/modules/button.module.scss";
 
 interface Props {
 	label?: string;

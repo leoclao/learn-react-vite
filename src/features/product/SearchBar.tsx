@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import styles from "./../styles/modules/product.module.scss";
+import styles from "@/styles/modules/product.module.scss";
 
 function SearchBar({
 	filterText,

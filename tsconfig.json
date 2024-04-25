@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": [
-      "ES2020",
+      "ESNext",
       "DOM",
       "DOM.Iterable"
     ],
@@ -22,29 +22,29 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "@components/*": [
+      "@/assets/*": [
+        "src/assets/*"
+      ],
+      "@/components/*": [
         "src/components/*"
       ],
-      "@constants/*": [
+      "@/constants/*": [
         "src/constants/*"
       ],
-      "@container/*": [
+      "@/container/*": [
         "src/container/*"
       ],
-      "@product/*": [
-        "src/features/product/*"
+      "@/features/*": [
+        "src/features/*"
       ],
-      "@profile/*": [
-        "src/features/profile/*"
-      ],
-      "@styles/*": [
+      "@/styles/*": [
         "src/styles/*"
       ],
-      "@styles/modules*": [
-        "src/styles/modules/*"
-      ],
+      "@/utils/*": [
+        "src/utils/*"
+      ]
     }
   },
   "include": [

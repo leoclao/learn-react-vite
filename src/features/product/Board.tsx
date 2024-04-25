@@ -2,7 +2,7 @@ import clsx from "clsx";
 import Category from "./Category";
 import Row from "./Row";
 
-import styles from "./../styles/modules/product.module.scss";
+import styles from "@/styles/modules/product.module.scss";
 
 function Board({ products, filterText, inStockOnly }) {
 	const rows = [];
