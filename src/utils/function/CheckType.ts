@@ -1,3 +1,7 @@
+export function isObject(value) {
+	return value !== null && typeof value === "object";
+}
+
 export function isStringOrStringArray(
 	param: string | string[],
 ): param is string | string[] {

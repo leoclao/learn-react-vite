@@ -1,29 +1,24 @@
+import { Avatar, Card, Grid } from "@/components";
+import styles from "@/styles/modules/profile.module.scss";
+import type Hide from "@/utils";
 import clsx from "clsx";
 import { useId, useState } from "react";
-import Avatar from "../../components/avatar";
-import Grid from "../../components/grid";
-import styles from "../styles/modules/profile.module.scss";
-import Info from "./info";
+import Info from "./Info";
 
-type Hide = {
-	isHideName: boolean;
-	isHideNickName: boolean;
-	isHideAvatar: boolean;
-	isHideInfo: boolean;
-};
+type IsShowFull = Hide extends { [K in keyof HTMLVideoElement]: false } ? true : false;
 
 interface Props {
 	className?: string;
 	profileData?: object;
-	isShowFull: boolean;
+	showInfo?: boolean;
 }
 
-function Profile({ className, profileData, isShowFull = false }: Props) {
+function Profile({ className, profileData, showInfo = false }: Props) {
 	const [filterText, setFilterText] = useState("");
-	const [inStockOnly, setInStockOnly] = useState(false);
+	// const [inStockOnly, setInStockOnly] = useState(false);
 
 	return (
-		<div className={clsx(styles.filterable)}>
+		<Card className={clsx(styles.filterable)}>
 			{profileData.avatar && (
 				<Avatar
 					src={profileData.avatar}
@@ -33,8 +28,8 @@ function Profile({ className, profileData, isShowFull = false }: Props) {
 			)}
 			{profileData.fullName && <label>{profileData.fullName}</label>}
 			{profileData.nickName && <label>{profileData.nickName}</label>}
-			{isShowFull && profileData.info && <Info info={profileData.info} />}
-		</div>
+			{showInfo && profileData.info && <Info info={profileData.info} />}
+		</Card>
 	);
 }
 

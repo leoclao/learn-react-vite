@@ -1,3 +1,2 @@
-import * as styleType from "./styleType";
-
-export default { styleType };
+export * from "./styleType";
+export * from "./types";

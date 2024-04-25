@@ -1,21 +1,7 @@
+import { Avatar, Button, Card, Grid, List, Progress } from "@/components";
+import { RibbonContainer } from "@/container";
+import { FilterableProduct, Profile } from "@/features";
 import React, { useState, useEffect } from "react";
-import { info } from "sass";
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-import Avatar from "./components/avatar";
-import Button from "./components/button";
-import Grid from "./components/grid";
-import List from "./components/list";
-import Container from "./container";
-import FilterableProduct from "./features/product";
-import Profile from "./features/profile";
-// import Board from './components/board';
-
-// interface squareProps {
-//   value?: string;
-//   onClick?: React.MouseEventHandler<HTMLElement>;
-// }
 
 const users = [
 	{
@@ -99,7 +85,7 @@ function App() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<Container type="FLUID">
+		<RibbonContainer type="fluid">
 			{/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -130,15 +116,19 @@ function App() {
 			{/* <FilterableProduct products={products} /> */}
 			<FilterableProduct products={PRODUCTS_LIST} />
 			{users && (
-				<Container>
+				<RibbonContainer>
 					<Grid cols={4}>
 						{users.map((user) => (
 							<Profile key={user.id} profileData={user} />
 						))}
 					</Grid>
-				</Container>
+				</RibbonContainer>
 			)}
-		</Container>
+			{/* <Progress value={80} /> */}
+			<Card>
+				Content
+			</Card>
+		</RibbonContainer>
 	);
 }
 

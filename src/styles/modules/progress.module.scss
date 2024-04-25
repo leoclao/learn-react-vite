@@ -1,0 +1,33 @@
+.base {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+
+  &::-webkit-progress-bar {
+    background-image: url('./../../assets/img/progress-bg.png');
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-color: transparent;
+  }
+
+  &::-webkit-progress-value {
+    background-color: transparent;
+    background-blend-mode: difference;
+    mix-blend-mode: overlay;
+    background-image: linear-gradient(to right, #47F4FE 0, #4BF4FF 50%, #2FBBE1 72%, #209AD0 86%, #1D86C5 100%);
+  }
+}
+
+.container {
+  width: 810px;
+  height: 64px;
+  background-color: darkred;
+  clip-path: url(#progressClipPath);
+  position: relative;
+
+  & svg {
+    position: absolute;
+  }
+}
