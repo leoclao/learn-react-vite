@@ -1,25 +1,72 @@
 .base {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  align-items: var(--button-align-item, center);
+  background-color: var(--button-background-color, #007bff);
+  border-color: var(--button-border-color-top, none) var(--button-border-color-right, none) var(--button-border-color-bottom, solid) var(--button-border-color-left, solid);
+  border-radius: var(--button-border-top-left-radius, unset) var(--button-border-top-right-radius, unset) var(--button-border-bottom-left-radius, unset) var(--button-border-bottom-right-radius, unset);
+  border-style: var(--button-border-style-top, none) var(--button-border-style-right, none) var(--button-border-style-bottom, solid) var(--button-border-style-left, solid);
+  border-width: var(--button-border-width-top, none) var(--button-border-width-right, none) var(--button-border-width-bottom, solid) var(--button-border-width-left, solid);
+  box-sizing: var(--button-box-sizing, border-box);
+  color: var(--button-color, #fff);
+  cursor: var(--button-cursor, pointer);
+  display: var(--button-display, flex);
+  font-size: var(--button-font-size, 1rem);
+  font-weight: var(--button-font-weight, 400);
+  height: var(--button-height, auto);
+  justify-content: var(--button-justify-content, center);
+  line-height: var(--button-line-height, 1.5);
+  padding: var(--button-padding-top, 0) var(--button-padding-right, 0) var(--button-padding-bottom, 0) var(--button-padding-left, 0);
+  text-align: var(--button-text-align, center);
+  text-decoration: var(--button-text-decoration, none);
+  white-space: var(--button-white-space, normal);
+  width: var(--button-width, auto);
 }
 
 .medium {
+  --button-font-size: medium;
+  --button-height: 2.25rem;
+  --button-padding-top: .25rem;
+  --button-padding-right: 1rem;
+  --button-padding-bottom: .25rem;
+  --button-padding-left: 1rem;
+
   &-square {
-    width: 2rem;
-    height: 2rem;
-    font-size: medium;
+    --button-height: 2rem;
+    --button-width: 2rem;
+    --button-font-size: medium;
   }
 }
 
+.large {
+  --button-font-size: medium;
+  --button-height: 3rem;
+  --button-padding-top: .25rem;
+  --button-padding-right: 1.25rem;
+  --button-padding-bottom: .25rem;
+  --button-padding-left: 1.25rem;
+}
+
 .hollow {
-  background-color: transparent;
-  border: 1px solid #ccc;
-  color: grey;
+  --button-background-color: transparent;
+  --button-border-style-top: solid;
+  --button-border-style-right: solid;
+  --button-border-style-bottom: solid;
+  --button-border-style-left: solid;
+  --button-border-width-top: 1px;
+  --button-border-width-right: 1px;
+  --button-border-width-bottom: 1px;
+  --button-border-width-left: 1px;
+  --button-border-color-top: #ccc;
+  --button-border-color-right: #ccc;
+  --button-border-color-bottom: #ccc;
+  --button-border-color-left: #ccc;
+  --button-color: grey;
+  --button-border-top-left-radius: .25rem;
+  --button-border-top-right-radius: .25rem;
+  --button-border-bottom-left-radius: .25rem;
+  --button-border-bottom-right-radius: .25rem;
 
   &:hover {
-    background-color: #ccc;
-    color: black;
+    --button-background-color: #ccc;
+    --button-color: black;
   }
 }
