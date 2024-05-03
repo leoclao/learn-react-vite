@@ -39,6 +39,9 @@
       "@/features/*": [
         "src/features/*"
       ],
+      "@/hooks/*": [
+        "src/hooks/*"
+      ],
       "@/styles/*": [
         "src/styles/*"
       ],

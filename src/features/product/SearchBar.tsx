@@ -1,12 +1,21 @@
-import clsx from "clsx";
 import styles from "@/styles/modules/product.module.scss";
+import clsx from "clsx";
+
+interface Props {
+	filterText: string;
+	inStockOnly?: boolean;
+	filterPlaceholder?: string;
+	onFilterTextChange?: (value: string) => void;
+	onInStockOnlyChange?: (value: boolean) => void;
+}
 
 function SearchBar({
 	filterText,
-	inStockOnly,
+	inStockOnly = false,
+	filterPlaceholder = "Search bar",
 	onFilterTextChange,
 	onInStockOnlyChange,
-}) {
+}: Props) {
 	return (
 		<form className={clsx(styles["search-bar"])}>
 			<div className={clsx(styles["search-bar__field"])}>
@@ -14,7 +23,7 @@ function SearchBar({
 					type="text"
 					title="Search"
 					value={filterText}
-					placeholder="Search"
+					placeholder={filterPlaceholder}
 					onChange={(e) => onFilterTextChange(e.target.value)}
 				/>
 				<label>

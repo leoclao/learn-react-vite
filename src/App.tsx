@@ -1,7 +1,9 @@
-import { Avatar, Button, Card, Grid, List, Progress } from "@/components";
+import { Avatar, Button, ButtonLink, Card, Grid, List, Progress } from "@/components";
 import { RibbonContainer } from "@/container";
 import { FilterableProduct, Profile } from "@/features";
+import { useWindowResize } from "@/hooks";
 import React, { useState, useEffect } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 
 const users = [
 	{
@@ -71,7 +73,15 @@ const PRODUCTS_LIST = [
 
 function App() {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const { width } = useWindowResize();
+	let listViewMobile: string;
 	let content: string;
+
+	if (width < 768) {
+		listViewMobile = "list list__item--mobile";
+	} else {
+		listViewMobile = "list";
+	}
 
 	useEffect(() => {
 		setIsLoggedIn();
@@ -85,50 +95,32 @@ function App() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<RibbonContainer type="fluid">
-			{/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1> */}
-			<div className="card">
-				<Button
-					onClick={() => setCount((count) => count + 1)}
-					label={`Count is ${count}`}
-					title="click to count"
-				/>
-				{/* <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p> */}
-			</div>
-			{/* <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <h1>Welcome to my app</h1> */}
-			{content}
-			{/* <Avatar title={user.name} src={user.imageUrl} alt={user.name} /> */}
-			<List className="list" itemClassName="list__item" data={products} />
-			{/* <Board cols={16} rows={22} /> */}
-			{/* <FilterableProduct products={products} /> */}
-			<FilterableProduct products={PRODUCTS_LIST} />
-			{users && (
-				<RibbonContainer>
-					<Grid cols={4}>
-						{users.map((user) => (
-							<Profile key={user.id} profileData={user} />
-						))}
-					</Grid>
-				</RibbonContainer>
-			)}
-			{/* <Progress value={80} /> */}
-			<Card>
-				Content
-			</Card>
-		</RibbonContainer>
+		<ErrorBoundary fallback={<p>Something went wrong. Try again later.</p>}>
+			<RibbonContainer type="fluid">
+				<div className="card">
+					<Button
+						onClick={() => setCount((count) => count + 1)}
+						label={`Count is ${count}`}
+						size={"large"}
+						hollow
+						title="click to count"
+					/>
+				</div>
+				<List className={`${listViewMobile}`} itemClassName="list__item" data={products} />
+				{/* <Board cols={16} rows={22} /> */}
+				{/* <FilterableProduct products={products} /> */}
+				<FilterableProduct products={PRODUCTS_LIST} />
+				{users && (
+					<RibbonContainer>
+						<Grid cols={4}>
+							{users.map((user) => (
+								<Profile key={user.id} profileData={user} />
+							))}
+						</Grid>
+					</RibbonContainer>
+				)}
+			</RibbonContainer>
+		</ErrorBoundary>
 	);
 }
 

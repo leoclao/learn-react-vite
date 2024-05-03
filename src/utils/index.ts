@@ -1,5 +1,7 @@
 export { isObject, isStringOrStringArray } from "./function";
 export {
+	ButtonSize,
+	CommonSize,
 	ContentDirection,
 	ContainerLayout,
 	DisplayZone,

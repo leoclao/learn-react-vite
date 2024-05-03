@@ -1,7 +1,7 @@
 export { default as Avatar } from "./avatar";
 export { default as Board } from "./board";
+export { Button, ButtonLink } from "./Button";
 export { Card, CardAction, CardContent, CardMedia, CardTitle } from "./Card";
-export { default as Button } from "./button";
 export { default as Field } from "./field";
 export { default as Grid } from "./grid";
 export { default as List } from "./list";
