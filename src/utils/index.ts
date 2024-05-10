@@ -1,7 +1,5 @@
 export { isObject, isStringOrStringArray } from "./function";
 export {
-	ButtonSize,
-	CommonSize,
 	ContentDirection,
 	ContainerLayout,
 	DisplayZone,
@@ -12,4 +10,6 @@ export {
 	ObjectLayout,
 	ProfileHidden,
 	RadialGradientShapeSize,
+	Size,
+	SizePlus,
 } from "./styles";

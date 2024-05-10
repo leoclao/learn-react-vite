@@ -1,4 +1,4 @@
-import { Avatar, Button, ButtonLink, Card, Grid, List, Progress } from "@/components";
+import { Button, ButtonLink, Card, Grid, List, Progress } from "@/components";
 import { RibbonContainer } from "@/container";
 import { FilterableProduct, Profile } from "@/features";
 import { useWindowResize } from "@/hooks";
@@ -11,7 +11,8 @@ const users = [
 		fullName: "Jackie Dao",
 		nickName: "JD",
 		avatar: "https://i.imgur.com/yXOvdOSs.jpg",
-		avatarSize: 90,
+		avatarSize: "large",
+		avatarRatio: "1x1",
 		info: [
 			{
 				id: 1,
@@ -47,8 +48,9 @@ const users = [
 		fullName: "Jackie Dao",
 		nickName: "JD",
 		avatar: "https://i.imgur.com/yXOvdOSs.jpg",
-		avatarSize: 90,
+		avatarSize: "large",
 		info: null,
+		avatarRatio: "1x1",
 	},
 ];
 
