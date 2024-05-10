@@ -22,8 +22,11 @@ function Profile({ className, profileData, showInfo = false }: Props) {
 			{profileData.avatar && (
 				<Avatar
 					src={profileData.avatar}
-					desc={profileData.fullName || profileData.nickName}
+					alt={profileData.fullName || profileData.nickName}
+					title={profileData.fullName || profileData.nickName}
 					size={profileData.avatarSize}
+					ratio={profileData.avatarRatio}
+					ariaDescribedby={profileData.fullName || profileData.nickName}
 				/>
 			)}
 			{profileData.fullName && <label>{profileData.fullName}</label>}

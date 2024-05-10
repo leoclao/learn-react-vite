@@ -1,5 +1,4 @@
-export { default as Avatar } from "./avatar";
-export { default as Board } from "./board";
+export { Avatar } from "./Avatar";
 export { Button, ButtonLink } from "./Button";
 export { Card, CardAction, CardContent, CardMedia, CardTitle } from "./Card";
 export { default as Field } from "./field";

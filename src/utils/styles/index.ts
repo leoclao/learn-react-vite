@@ -1,6 +1,4 @@
 export {
-	ButtonSize,
-	CommonSize,
 	ContentDirection,
 	ContainerLayout,
 	DisplayZone,
@@ -9,6 +7,8 @@ export {
 	ObjectLayout,
 	ProfileHidden,
 	Ratio,
+	Size,
+	SizePlus,
 } from "./common";
 export {
 	GradientLinearDir,
