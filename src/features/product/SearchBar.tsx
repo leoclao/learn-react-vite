@@ -1,3 +1,4 @@
+import { FieldBase } from "@/components/Field";
 import styles from "@/styles/modules/product.module.scss";
 import clsx from "clsx";
 
@@ -19,20 +20,14 @@ function SearchBar({
 	return (
 		<form className={clsx(styles["search-bar"])}>
 			<div className={clsx(styles["search-bar__field"])}>
-				<input
-					type="text"
-					title="Search"
-					value={filterText}
-					placeholder={filterPlaceholder}
-					onChange={(e) => onFilterTextChange(e.target.value)}
-				/>
+				<FieldBase id="inputSearchBar" value={filterText} placeHolder={filterPlaceholder} onChange={(e) => onFilterTextChange(e.target.value)} />
 				<label>
 					<input
 						type="checkbox"
 						checked={inStockOnly}
 						onChange={(e) => onInStockOnlyChange(e.target.checked)}
 					/>
-					{" Only show products in stock"}
+					{"Only show products in stock"}
 				</label>
 			</div>
 		</form>
