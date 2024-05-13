@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-function Infinite() {
+function ScrollInfinite() {
   const [count, setCount] = useState(0);
   const [items, setItems] = useState<string[]>([]);
   const [isFetching, setIsFetching] = useState(false);
@@ -32,3 +32,5 @@ function Infinite() {
     </div>
   )
 }
+
+export default ScrollInfinite;

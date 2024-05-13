@@ -1,0 +1,13 @@
+.base {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+}
+
+.Label {
+  font-size: 1rem;
+  font-weight: 600;
+}

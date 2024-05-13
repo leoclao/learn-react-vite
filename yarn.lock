@@ -1065,12 +1065,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:types-react-dom@beta":
-  version: 19.0.0-beta.1
-  resolution: "types-react-dom@npm:19.0.0-beta.1"
+"@types/react-dom@npm:^18.3.0":
+  version: 18.3.0
+  resolution: "@types/react-dom@npm:18.3.0"
   dependencies:
     "@types/react": "npm:*"
-  checksum: 547967fd1513ae665cf02534cf212c55f76f208072447cd5d82edb7c3e09b77d83aeb1017768fb79516baa580c62d8f73befb29c45671d7518ee56b543ce3b4f
+  checksum: 6c90d2ed72c5a0e440d2c75d99287e4b5df3e7b011838cdc03ae5cd518ab52164d86990e73246b9d812eaf02ec351d74e3b4f5bd325bf341e13bf980392fd53b
   languageName: node
   linkType: hard
 
@@ -1084,12 +1084,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:types-react@beta":
-  version: 19.0.0-beta.1
-  resolution: "types-react@npm:19.0.0-beta.1"
+"@types/react@npm:^18.3.2":
+  version: 18.3.2
+  resolution: "@types/react@npm:18.3.2"
   dependencies:
+    "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 5781a9044cd09f23b035721a8c5171d26f090d0fb63bf07a926c3396e09d57036ee5b91aaff3c0e94cb84d6a47c2803bb77072d1622cd1c125375ab2087068b0
+  checksum: 9fb2f1fcf7e889ee4ea7c3c5978df595c66e770e5fd3a245dbdd2589b9b911524c11dab25a6275d8af4e336e4cb5fa850d447884b84c335a187a338c89df99ba
   languageName: node
   linkType: hard
 
@@ -2076,18 +2077,18 @@ __metadata:
   resolution: "learn-react-vite@workspace:."
   dependencies:
     "@biomejs/biome": "npm:1.7.3"
-    "@types/react": "npm:types-react@beta"
-    "@types/react-dom": "npm:types-react-dom@beta"
+    "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:^18.3.0"
     "@vitejs/plugin-react": "npm:^4.2.1"
     clsx: "npm:^2.1.1"
     i: "npm:^0.3.7"
     npm: "npm:^10.7.0"
-    react: "npm:^19.0.0-beta-1beb73de0f-20240503"
-    react-dom: "npm:^19.0.0-beta-1beb73de0f-20240503"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
     react-error-boundary: "npm:^4.0.13"
-    react-hook-form: "npm:^7.51.3"
+    react-hook-form: "npm:^7.51.4"
     react-responsive: "npm:^10.0.0"
-    sass: "npm:^1.76.0"
+    sass: "npm:^1.77.1"
     typedoc: "npm:^0.25.13"
     typescript: "npm:^5.4.5"
     vite: "npm:^5.2.11"
@@ -2228,7 +2229,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -2941,14 +2942,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.0.0-beta-1beb73de0f-20240503":
-  version: 19.0.0-canary-fd0da3eef-20240404
-  resolution: "react-dom@npm:19.0.0-canary-fd0da3eef-20240404"
+"react-dom@npm:^18.3.1":
+  version: 18.3.1
+  resolution: "react-dom@npm:18.3.1"
   dependencies:
-    scheduler: "npm:0.25.0-canary-fd0da3eef-20240404"
+    loose-envify: "npm:^1.1.0"
+    scheduler: "npm:^0.23.2"
   peerDependencies:
-    react: 19.0.0-canary-fd0da3eef-20240404
-  checksum: 49a0a29a372c4c6c9af3c289b3b080cf28529f1866cc82250115107aaf9e165d1c71114f848e6d522b3fa5075e77d59fe1bb31a3f97e46773676c8bcff77633b
+    react: ^18.3.1
+  checksum: a752496c1941f958f2e8ac56239172296fcddce1365ce45222d04a1947e0cc5547df3e8447f855a81d6d39f008d7c32eab43db3712077f09e3f67c4874973e85
   languageName: node
   linkType: hard
 
@@ -2963,12 +2965,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.51.3":
-  version: 7.51.3
-  resolution: "react-hook-form@npm:7.51.3"
+"react-hook-form@npm:^7.51.4":
+  version: 7.51.4
+  resolution: "react-hook-form@npm:7.51.4"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18
-  checksum: dd7dfc8514df19a13b7647b3faebdcb1329723afb52454626496eeaa657323d42bab12dc85e6b77d758a166c6427fa87f13c5bd9f5f78666c682e8263117e297
+  checksum: 73b585adb80bd99ae1fc21208e389fd9830f82c8c8bab4b6c4d5853f858a3259b8dc8fd4aa4608a0bd95bc69883c9332f2fa5e8c80dc17dbb2866de9744dbdb6
   languageName: node
   linkType: hard
 
@@ -3000,10 +3002,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.0.0-beta-1beb73de0f-20240503":
-  version: 19.0.0-canary-fd0da3eef-20240404
-  resolution: "react@npm:19.0.0-canary-fd0da3eef-20240404"
-  checksum: e3a82ed61e2c4e00edc114a437c6345c4a9eb54725b7a1c46a44aa346c68d55482e024c764a5b34ef01732e9d0e5bd581a9d0fef59a4587b44f9068e2c68c0d7
+"react@npm:^18.3.1":
+  version: 18.3.1
+  resolution: "react@npm:18.3.1"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 283e8c5efcf37802c9d1ce767f302dd569dd97a70d9bb8c7be79a789b9902451e0d16334b05d73299b20f048cbc3c7d288bbbde10b701fa194e2089c237dbea3
   languageName: node
   linkType: hard
 
@@ -3126,23 +3130,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.76.0":
-  version: 1.76.0
-  resolution: "sass@npm:1.76.0"
+"sass@npm:^1.77.1":
+  version: 1.77.1
+  resolution: "sass@npm:1.77.1"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 976baf2c378e104f8d4ffca5375c8aa6f3d24f59d5c0a5db8d68a51f89edce45dedc25cfcd304b309fc8568d146de9e2c6cd189395e97bb2840d39feb13932ff
+  checksum: edcfc7d038234b1198c3ddcac5963fcd1e17a9c1ee0f9bd09784ab5353b60ff50b189b4c9154b34f5da9ca0eaab8b189fd3e83a4b43a494151ad4735f8e5f364
   languageName: node
   linkType: hard
 
-"scheduler@npm:0.25.0-canary-fd0da3eef-20240404":
-  version: 0.25.0-canary-fd0da3eef-20240404
-  resolution: "scheduler@npm:0.25.0-canary-fd0da3eef-20240404"
-  checksum: 14bd5e412cf3c1f263e3ef97d7a7d556871d50dd452a54cee1084e9cc1986534ec39efcda29166b10dc89dbca4c42c7aff783b38cbe8cb86ef7c7b34a18963a9
+"scheduler@npm:^0.23.2":
+  version: 0.23.2
+  resolution: "scheduler@npm:0.23.2"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 26383305e249651d4c58e6705d5f8425f153211aef95f15161c151f7b8de885f24751b377e4a0b3dd42cce09aad3f87a61dab7636859c0d89b7daf1a1e2a5c78
   languageName: node
   linkType: hard
 
