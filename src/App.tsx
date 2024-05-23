@@ -1,4 +1,4 @@
-import { Button, ButtonLink, Card, Grid, List, Progress } from "@/components";
+import { Button, ButtonLink, Card, Grid, List, Masonry, Progress } from "@/components";
 import { RibbonContainer } from "@/container";
 import { FilterableProduct, Profile } from "@/features";
 import { useWindowResize } from "@/hooks";
@@ -45,7 +45,34 @@ const users = [
 	},
 	{
 		id: 2,
-		fullName: "Jackie Dao",
+		fullName: "JD",
+		nickName: "JD",
+		avatar: "https://i.imgur.com/yXOvdOSs.jpg",
+		avatarSize: "large",
+		info: null,
+		avatarRatio: "1x2",
+	},
+	{
+		id: 3,
+		fullName: "Nhut Dao",
+		nickName: "JD",
+		avatar: "https://i.imgur.com/yXOvdOSs.jpg",
+		avatarSize: "large",
+		info: null,
+		avatarRatio: "1x1",
+	},
+	{
+		id: 4,
+		fullName: "Nhut",
+		nickName: "JD",
+		avatar: "https://i.imgur.com/yXOvdOSs.jpg",
+		avatarSize: "large",
+		info: null,
+		avatarRatio: "9x16",
+	},
+	{
+		id: 5,
+		fullName: "Dao",
 		nickName: "JD",
 		avatar: "https://i.imgur.com/yXOvdOSs.jpg",
 		avatarSize: "large",
@@ -114,11 +141,16 @@ function App() {
 				<FilterableProduct products={PRODUCTS_LIST} />
 				{users && (
 					<RibbonContainer>
-						<Grid cols={4}>
+						<Grid cols={4} gap={2}>
 							{users.map((user) => (
 								<Profile key={user.id} profileData={user} />
 							))}
 						</Grid>
+						{/* <Masonry cols={2} gap={4}>
+							{users.map((user) => (
+								<Profile key={user.id} profileData={user} />
+							))}
+						</Masonry> */}
 					</RibbonContainer>
 				)}
 			</RibbonContainer>

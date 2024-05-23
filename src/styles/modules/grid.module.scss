@@ -1,83 +1,116 @@
 .grid {
+  --grid-temp-cols: 0;
+  --row-gap: 0;
+  --col-gap: 0;
+  width: 100%;
   display: grid;
+  grid-template-columns: repeat(var(--grid-temp-cols), minmax(0, 1fr));
+  row-gap: var(--row-gap);
+  column-gap: var(--col-gap);
 
-  &-cols {
-    &-1 {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
+  &Cols {
+    &1 {
+      --grid-temp-cols: 1;
     }
-    &-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    &2 {
+      --grid-temp-cols: 2;
     }
-    &-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    &3 {
+      --grid-temp-cols: 3;
     }
-    &-4 {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    &4 {
+      --grid-temp-cols: 4;
     }
-    &-5 {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    &5 {
+      --grid-temp-cols: 5;
     }
-    &-6 {
-      grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    &6 {
+      --grid-temp-cols: 6;
     }
-    &-7 {
-      grid-template-columns: repeat(7, minmax(0, 1fr));
+
+    &7 {
+      --grid-temp-cols: 7;
     }
-    &-8 {
-      grid-template-columns: repeat(8, minmax(0, 1fr));
+
+    &8 {
+      --grid-temp-cols: 8;
     }
-    &-9 {
-      grid-template-columns: repeat(9, minmax(0, 1fr));
+
+    &9 {
+      --grid-temp-cols: 9;
     }
-    &-10 {
-      grid-template-columns: repeat(10, minmax(0, 1fr));
+
+    &10 {
+      --grid-temp-cols: 10;
     }
-    &-11 {
-      grid-template-columns: repeat(11, minmax(0, 1fr));
+
+    &11 {
+      --grid-temp-cols: 11;
     }
-    &-12 {
-      grid-template-columns: repeat(12, minmax(0, 1fr));
+
+    &12 {
+      --grid-temp-cols: 12;
     }
+
+    // grid 24
     &-13 {
-      grid-template-columns: repeat(13, minmax(0, 1fr));
+      --grid-temp-cols: 13;
     }
+
     &-14 {
-      grid-template-columns: repeat(14, minmax(0, 1fr));
+      --grid-temp-cols: 14;
     }
-    &-15 {
-      grid-template-columns: repeat(15, minmax(0, 1fr));
+
+    &15 {
+      --grid-temp-cols: 15;
     }
-    &-16 {
-      grid-template-columns: repeat(16, minmax(0, 1fr));
+
+    &16 {
+      --grid-temp-cols: 16;
     }
-    &-17 {
-      grid-template-columns: repeat(17, minmax(0, 1fr));
+
+    &17 {
+      --grid-temp-cols: 17;
     }
-    &-18 {
-      grid-template-columns: repeat(18, minmax(0, 1fr));
+
+    &18 {
+      --grid-temp-cols: 18;
     }
-    &-19 {
-      grid-template-columns: repeat(19, minmax(0, 1fr));
+
+    &19 {
+      --grid-temp-cols: 19;
     }
-    &-20 {
-      grid-template-columns: repeat(20, minmax(0, 1fr));
+
+    &20 {
+      --grid-temp-cols: 20;
     }
-    &-21 {
-      grid-template-columns: repeat(21, minmax(0, 1fr));
+
+    &21 {
+      --grid-temp-cols: 21;
     }
-    &-22 {
-      grid-template-columns: repeat(22, minmax(0, 1fr));
+
+    &22 {
+      --grid-temp-cols: 22;
     }
-    &-23 {
-      grid-template-columns: repeat(23, minmax(0, 1fr));
+
+    &23 {
+      --grid-temp-cols: 23;
     }
-    &-24 {
-      grid-template-columns: repeat(24, minmax(0, 1fr));
+
+    &24 {
+      --grid-temp-cols: 24;
     }
-    &-none {
+
+    &None {
       grid-template-columns: none;
     }
-    &-subgrid {
+
+    &Subgrid {
       grid-template-columns: subgrid;
     }
   }
@@ -86,146 +119,370 @@
 .gap {
   gap: 0px;
 
-  &-1 {
-    gap: .25rem;
+  &1 {
+    --row-gap: .25rem;
+    --col-gap: .25rem;
   }
 
-  &-2 {
-    gap: .5rem;
+  &2 {
+    --row-gap: .5rem;
+    --col-gap: .5rem;
+  }
+
+  &3 {
+    --row-gap: .75rem;
+    --col-gap: .75rem;
+  }
+
+  &4 {
+    --row-gap: 1rem;
+    --col-gap: 1rem;
+  }
+
+  &5 {
+    --row-gap: 1.25rem;
+    --col-gap: 1.25rem;
+  }
+
+  &6 {
+    --row-gap: 1.5rem;
+    --col-gap: 1.5rem;
   }
 }
 
 .col {
-  &-span {
-    &-auto {
+  &Span {
+    &Auto {
       grid-column: auto;
     }
-    &-full {
+
+    &Full {
       grid-column: 1 / -1;
     }
-    &-1 {
+
+    &1 {
       grid-column: span 1 / span 1;
     }
-    &-2 {
+
+    &2 {
       grid-column: span 2 / span 2;
     }
-    &-3 {
+
+    &3 {
       grid-column: span 3 / span 3;
     }
-    &-4 {
+
+    &4 {
       grid-column: span 4 / span 4;
     }
-    &-5 {
+
+    &5 {
       grid-column: span 5 / span 5;
     }
-    &-6 {
+
+    &6 {
       grid-column: span 6 / span 6;
     }
-    &-7 {
+
+    &7 {
       grid-column: span 7 / span 7;
     }
-    &-8 {
+
+    &8 {
       grid-column: span 8 / span 8;
     }
-    &-9 {
+
+    &9 {
       grid-column: span 9 / span 9;
     }
+
     &-10 {
       grid-column: span 10 / span 10;
     }
-    &-11 {
+
+    &11 {
       grid-column: span 11 / span 11;
     }
-    &-12 {
+
+    &12 {
       grid-column: span 12 / span 12;
     }
   }
-  &-start {
-    &-auto {
+
+  &Start {
+    &Auto {
       grid-column-start: auto;
     }
-    &-1 {
+
+    &1 {
       grid-column-start: 1;
     }
-    &-2 {
+
+    &2 {
       grid-column-start: 2;
     }
-    &-3 {
+
+    &3 {
       grid-column-start: 3;
     }
-    &-4 {
+
+    &4 {
       grid-column-start: 4;
     }
-    &-5 {
+
+    &5 {
       grid-column-start: 5;
     }
-    &-6 {
+
+    &6 {
       grid-column-start: 6;
     }
-    &-7 {
+
+    &7 {
       grid-column-start: 7;
     }
-    &-8 {
+
+    &8 {
       grid-column-start: 8;
     }
-    &-9 {
+
+    &9 {
       grid-column-start: 9;
     }
-    &-10 {
+
+    &10 {
       grid-column-start: 10;
     }
-    &-11 {
+
+    &11 {
       grid-column-start: 11;
     }
-    &-12 {
+
+    &12 {
       grid-column-start: 12;
     }
-    &-13 {
+
+    &13 {
       grid-column-start: 13;
     }
   }
-  &-end {
-    &-auto {
+
+  &End {
+    &Auto {
       grid-column-end: auto;
     }
-    &-1 {
+
+    &1 {
       grid-column-end: 1;
     }
-    &-2 {
+
+    &2 {
       grid-column-end: 2;
     }
-    &-3 {
+
+    &3 {
       grid-column-end: 3;
     }
-    &-4 {
+
+    &4 {
       grid-column-end: 4;
     }
-    &-5 {
+
+    &5 {
       grid-column-end: 5;
     }
-    &-6 {
+
+    &6 {
       grid-column-end: 6;
     }
-    &-7 {
+
+    &7 {
       grid-column-end: 7;
     }
-    &-8 {
+
+    &8 {
       grid-column-end: 8;
     }
-    &-9 {
+
+    &9 {
       grid-column-end: 9;
     }
-    &-10 {
+
+    &10 {
       grid-column-end: 10;
     }
-    &-11 {
+
+    &11 {
       grid-column-end: 11;
     }
-    &-12 {
+
+    &12 {
       grid-column-end: 12;
     }
-    &-13 {
+
+    &13 {
       grid-column-end: 13;
+    }
+  }
+}
+
+.masonry {
+  --msr-grid-cols: 0;
+  --msr-grid-gap: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--msr-grid-cols), minmax(0, 1fr));
+  grid-template-rows: masonry;
+  grid-gap: var(--msr-grid-gap);
+
+  &Cols {
+
+    &1 {
+      --msr-grid-cols: 1;
+    }
+
+    &2 {
+      --msr-grid-cols: 2;
+    }
+
+    &3 {
+      --msr-grid-cols: 3;
+    }
+
+    &4 {
+      --msr-grid-cols: 4;
+    }
+
+    &5 {
+      --msr-grid-cols: 5;
+    }
+
+    &6 {
+      --msr-grid-cols: 6;
+    }
+
+    &7 {
+      --msr-grid-cols: 7;
+    }
+
+    &8 {
+      --msr-grid-cols: 8;
+    }
+
+    &9 {
+      --msr-grid-cols: 9;
+    }
+
+    &10 {
+      --msr-grid-cols: 10;
+    }
+
+    &11 {
+      --msr-grid-cols: 11;
+    }
+
+    &12 {
+      --msr-grid-cols: 12;
+    }
+  }
+
+  &Gap {
+    --msr-grid-gap: 0;
+
+    &1 {
+      --msr-grid-gap: 0.25rem;
+    }
+
+    &2 {
+      --msr-grid-gap: 0.5rem;
+    }
+
+    &3 {
+      --msr-grid-gap: 0.75rem;
+    }
+
+    &4 {
+      --msr-grid-gap: 1rem;
+    }
+
+    &5 {
+      --msr-grid-gap: 1.25rem;
+    }
+
+    &6 {
+      --msr-grid-gap: 1.5rem;
+    }
+
+    &7 {
+      --msr-grid-gap: 1.75rem;
+    }
+
+    &8 {
+      --msr-grid-gap: 2rem;
+    }
+
+    &9 {
+      --msr-grid-gap: 2.25rem;
+    }
+
+    &10 {
+      --msr-grid-gap: 2.5rem;
+    }
+
+    &11 {
+      --msr-grid-gap: 2.75rem;
+    }
+
+    &12 {
+      --msr-grid-gap: 3rem;
+    }
+
+    &13 {
+      --msr-grid-gap: 3.25rem;
+    }
+
+    &14 {
+      --msr-grid-gap: 3.5rem;
+    }
+
+    &15 {
+      --msr-grid-gap: 3.75rem;
+    }
+
+    &16 {
+      --msr-grid-gap: 4rem;
+    }
+
+    &17 {
+      --msr-grid-gap: 4.25rem;
+    }
+
+    &18 {
+      --msr-grid-gap: 4.5rem;
+    }
+
+    &19 {
+      --msr-grid-gap: 4.75rem;
+    }
+
+    &20 {
+      --msr-grid-gap: 5rem;
+    }
+
+    &21 {
+      --msr-grid-gap: 5.25rem;
+    }
+
+    &22 {
+      --msr-grid-gap: 5.5rem;
+    }
+
+    &23 {
+      --msr-grid-gap: 5.75rem;
+    }
+
+    &24 {
+      --msr-grid-gap: 6rem;
     }
   }
 }

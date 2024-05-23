@@ -21,6 +21,9 @@ export type DisplayZone =
 // Heading Size
 export type HeadingSize = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
+// Grid TypeType
+export type GridType = "default" | "masonry";
+
 // Media type
 export type MediaType = "image" | "video" | "audio";
 
@@ -31,4 +34,4 @@ export type ObjectLayout = "horizontal" | "vertical" | "variant";
 export type ProfileHidden = "name" | "nickName" | "avatar" | "info";
 
 // Ratio
-export type Ratio = "1x1" | "3x2" | "3x4" | "4x3" | "9x16" | "16x9" | "16x10";
+export type Ratio = "1x1" | "1x2" | "3x2" | "3x4" | "4x3" | "9x16" | "16x9" | "16x10";
