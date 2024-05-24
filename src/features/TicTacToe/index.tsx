@@ -2,7 +2,7 @@ import { Button } from "@/components/Button";
 import styles from "@/styles/modules/board.module.scss";
 import clsx from "clsx";
 import React, { useState } from "react";
-import Grid from "../../components/grid";
+import Grid from "../../components/Grid";
 // import Message from "../message";
 
 interface Props {
