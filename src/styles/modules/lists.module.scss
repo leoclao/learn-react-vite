@@ -1,0 +1,20 @@
+.Base {}
+
+// Unordered List Marker
+.Marker {
+  &None {
+    list-style-type: none;
+  }
+
+  &Disc {
+    list-style-type: disc;
+  }
+
+  &Circle {
+    list-style-type: circle;
+  }
+
+  &Square {
+    list-style-type: square;
+  }
+}

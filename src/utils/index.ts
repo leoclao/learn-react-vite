@@ -12,4 +12,7 @@ export {
 	RadialGradientShapeSize,
 	Size,
 	SizePlus,
+	List,
+	UnorderedListMarker,
+	OrderedListType,
 } from "./styles";
