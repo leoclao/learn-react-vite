@@ -24,6 +24,11 @@ export type HeadingSize = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 // Grid TypeType
 export type GridType = "default" | "masonry";
 
+// List type
+export type List = "unordered" | "ordered" | "description";
+export type UnorderedListMarker = "none" | "disc" | "circle" | "square";
+export type OrderedListType = "1" | "A" | "a" | "I" | "i";
+
 // Media type
 export type MediaType = "image" | "video" | "audio";
 

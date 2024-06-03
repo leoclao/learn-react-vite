@@ -1,4 +1,4 @@
-import { Button, ButtonLink, Card, Grid, List, Masonry, Progress } from "@/components";
+import { Button, ButtonLink, Card, DescLists, Grid, List, Masonry, OrderedLists, Progress, UnorderedLists } from "@/components";
 import { RibbonContainer } from "@/container";
 import { FilterableProduct, Profile } from "@/features";
 import { useWindowResize } from "@/hooks";
@@ -82,9 +82,9 @@ const users = [
 ];
 
 const products = [
-	{ title: "Cabbage", isFruit: false, id: 1 },
-	{ title: "Garlic", isFruit: false, id: 2 },
-	{ title: "Apple", isFruit: true, id: 3 },
+	{ title: "Cabbage", isFruit: false, id: 1, describes: "Cabbage describes" },
+	{ title: "Garlic", isFruit: false, id: 2, describes: "Garlic describes" },
+	{ title: "Apple", isFruit: true, id: 3, describes: "Apple describes" },
 ];
 
 // function Square({ value, onClick }: squareProps) {
@@ -135,7 +135,24 @@ function App() {
 						title="click to count"
 					/>
 				</div>
-				<List className={`${listViewMobile}`} itemClassName="list__item" data={products} />
+				<UnorderedLists
+					// className={`${listViewMobile}`}
+					// marker="square"
+					itemClassName="list__item"
+					data={products}
+				/>
+				<OrderedLists
+					// className={`${listViewMobile}`}
+					// marker="square"
+					type="I"
+					itemClassName="list__item"
+					data={products}
+				/>
+
+				<DescLists
+					// className={`${listViewMobile}`}
+					data={products}
+				/>
 				{/* <Board cols={16} rows={22} /> */}
 				{/* <FilterableProduct products={products} /> */}
 				<FilterableProduct products={PRODUCTS_LIST} />
