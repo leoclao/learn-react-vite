@@ -32,6 +32,9 @@ export type OrderedListType = "1" | "A" | "a" | "I" | "i";
 // Media type
 export type MediaType = "image" | "video" | "audio";
 
+// Message types
+export type MessageType = "info" | "warning" | "error";
+
 // Content Layout
 export type ObjectLayout = "horizontal" | "vertical" | "variant";
 

@@ -13,6 +13,7 @@ export {
 	Size,
 	SizePlus,
 	List,
+	MessageType,
 	UnorderedListMarker,
 	OrderedListType,
 } from "./styles";
