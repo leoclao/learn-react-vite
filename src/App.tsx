@@ -142,7 +142,7 @@ function App() {
 					itemClassName="list__item"
 					data={products}
 				/>
-				<Message types="warning" content="Message demo" />
+				<Message types={messageType} content="Message demo" />
 				{/* <Board cols={16} rows={22} /> */}
 				{/* <FilterableProduct products={products} /> */}
 				<FilterableProduct products={PRODUCTS_LIST} />

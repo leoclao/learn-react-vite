@@ -10,58 +10,26 @@ interface Props {
 	content: React.ReactNode;
 }
 
-function Message({ types = "Base", size = "medium", content }: Props) {
-	const newType = (key) => {
-		let type = "";
-		switch (key) {
-			case "warning":
-				type = "Warning";
-				break;
-			case "error":
-				type = "Error";
-				break;
+function Message({ types = "Info", size = "medium", content }: Props) {
 
-			default:
-				type = "Info";
-				break;
-		}
-		return type;
+	const typeMapping = {
+		warning: "Warning",
+		error: "Error",
+		info: "Info",
 	}
 
-	const newSize = (key) => {
-		let size = "";
-		switch (key) {
-			case "tiny":
-				size = "Tiny";
-				break;
-
-			case "small":
-				size = "Small";
-				break;
-
-			case "large":
-				size = "Large";
-				break;
-
-			case "large-x":
-				size = "LargeX";
-				break;
-
-			case "large-xx":
-				size = "Large2X";
-				break;
-
-			case "large-xxx":
-				size = "Large3X";
-				break;
-
-			default:
-				size = "Medium";
-				break;
-		}
-
-		return size;
+	const sizeMapping = {
+		tiny: "Tiny",
+		small: "Small",
+		medium: "Medium",
+		large: "Large",
+		"large-x": "LargeX",
+		"large-xx": "Large2X",
+		"large-xxx": "Large3X",
 	}
+
+	const newType = (key: string) => typeMapping[key] || "Info";
+	const newSize = (key: string) => sizeMapping[key] || "Medium";
 
 	const className = clsx(
 		styles.Base,
