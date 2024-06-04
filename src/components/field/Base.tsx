@@ -1,7 +1,7 @@
 import styles from "@/styles/modules/field.module.scss";
 import type { Size } from "@/utils";
 import clsx from "clsx";
-import Message from "../message";
+import Message from "../Message";
 
 interface Props {
 	label?: string;

@@ -1,8 +1,100 @@
-.base {
+.Base {
+  background-color: var(--msg-bg-color, transparent);
+  border: var(--msg-border-w, 0) var(--msg-border-style, none) var(--msg-border-color, initial);
+  border-radius: var(--msg-br, .25rem);
+  color: var(--msg-color, initial);
   display: block;
-  font-size: medium;
+  font-size: var(--msg-font-size, initial);
+  padding: var(--msg-pt, 0) var(--msg-pr, 0) var(--msg-pb, 0) var(--msg-pl, 0);
+
+  @media (forced-colors: active) and (prefers-color-scheme: light) {
+    --msg-bg-color: transparent;
+    forced-color-adjust: none;
+  }
+
+  @media (forced-colors: active) and (prefers-color-scheme: dark) {
+    --msg-bg-color: transparent;
+    forced-color-adjust: none;
+  }
 }
 
-.error {
-  color: brown;
+.Info {
+  --msg-bg-color: LightCyan;
+  --msg-border-w: 1px;
+  --msg-border-style: solid;
+  --msg-border-color: DodgerBlue;
+  --msg-color: DodgerBlue;
+}
+
+.Error {
+  --msg-bg-color: MistyRose;
+  --msg-border-w: 1px;
+  --msg-border-style: solid;
+  --msg-border-color: salmon;
+  --msg-color: brown;
+}
+
+.Warning {
+  --msg-bg-color: LightYellow;
+  --msg-border-w: 1px;
+  --msg-border-style: solid;
+  --msg-border-color: GoldenRod;
+  --msg-color: GoldenRod;
+}
+
+// Size scope
+.Tiny {
+  --msg-font-size: .75rem;
+  --msg-pt: .25rem;
+  --msg-pr: .5rem;
+  --msg-pb: .25rem;
+  --msg-pl: .5rem;
+}
+
+.Small {
+  --msg-font-size: .875rem;
+  --msg-pt: .375rem;
+  --msg-pr: .5rem;
+  --msg-pb: .375rem;
+  --msg-pl: .5rem;
+}
+
+.Medium {
+  --msg-font-size: 1rem;
+  --msg-pt: .5rem;
+  --msg-pr: .75rem;
+  --msg-pb: .5rem;
+  --msg-pl: .75rem;
+}
+
+.Large {
+  --msg-font-size: 1.25rem;
+  --msg-pt: .5rem;
+  --msg-pr: .75rem;
+  --msg-pb: .5rem;
+  --msg-pl: .75rem;
+
+  &X {
+    --msg-font-size: 1.5rem;
+    --msg-pt: .5rem;
+    --msg-pr: .75rem;
+    --msg-pb: .5rem;
+    --msg-pl: .75rem;
+  }
+
+  &2X {
+    --msg-font-size: 1.75rem;
+    --msg-pt: .5rem;
+    --msg-pr: .75rem;
+    --msg-pb: .5rem;
+    --msg-pl: .75rem;
+  }
+
+  &3X {
+    --msg-font-size: 2rem;
+    --msg-pt: .5rem;
+    --msg-pr: .75rem;
+    --msg-pb: .5rem;
+    --msg-pl: .75rem;
+  }
 }
