@@ -10,6 +10,11 @@ type Props = {
 }
 
 function ProgressClipPath({ size, value = 0, clipPath }: Props) {
+  if (value < 0 || value > 100) {
+    console.error("Progress value must be between 0 and 100");
+    value = Math.max(0, Math.min(value, 100));
+  }
+
   return (
     <div className={clsx(styles.clipPathContainer)}>
       {/* <svg width="0" height="0" viewBox="0 0 811 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

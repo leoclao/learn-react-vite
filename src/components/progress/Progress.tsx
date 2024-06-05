@@ -1,5 +1,5 @@
+import type Size from "@/constants/types/size";
 import styles from "@/styles/modules/progress.module.scss";
-import type { Size } from "@/utils"
 import clsx from "clsx";
 import type React from "react";
 
@@ -8,7 +8,7 @@ type Props = {
   value: number;
 }
 
-function Progress({ size, value = 0 }: Props) {
+function Progress({ size = "medium", value = 0 }: Props) {
   return (
     <progress
       className={clsx(
