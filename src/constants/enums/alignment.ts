@@ -1,4 +1,4 @@
-enum eAlign {
+export enum EAlign {
 	horizontal = "HORIZONTAL",
 	vertical = "VERTICAL",
 	top = "TOP",
@@ -7,5 +7,3 @@ enum eAlign {
 	left = "LEFT",
 	center = "CENTER",
 }
-
-export default { eAlign };

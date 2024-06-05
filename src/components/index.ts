@@ -5,5 +5,5 @@ export { FieldBase } from "./Field";
 export { Grid, Masonry } from "./Grid";
 export { OrderedLists, UnorderedLists, DescLists } from "./List";
 export { default as Message } from "./Message";
-export { default as Progress } from "./progress";
+export { Progress, ProgressClipPath } from "./Progress";
 export { default as Thumb } from "./thumb";

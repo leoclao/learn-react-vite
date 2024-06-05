@@ -1,4 +1,4 @@
-import { Button, ButtonLink, Card, DescLists, Grid, List, Masonry, Message, UnorderedLists } from "@/components";
+import { Button, ButtonLink, Card, DescLists, Grid, List, Masonry, Message, Progress, UnorderedLists } from "@/components";
 import { RibbonContainer } from "@/container";
 import { FilterableProduct, Profile } from "@/features";
 import { useWindowResize } from "@/hooks";
@@ -142,9 +142,9 @@ function App() {
 					itemClassName="list__item"
 					data={products}
 				/>
-				<Message types={messageType} content="Message demo" />
-				{/* <Board cols={16} rows={22} /> */}
-				{/* <FilterableProduct products={products} /> */}
+				<Message types="error" size="small" content="Message demo" />
+				<Progress value={50} />
+				{/* Demo Progress */}
 				<FilterableProduct products={PRODUCTS_LIST} />
 				{users && (
 					<RibbonContainer>
