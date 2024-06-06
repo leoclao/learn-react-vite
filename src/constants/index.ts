@@ -1,2 +1,2 @@
-export * from "./styleType";
-export * from "./types";
+export { sizeMapping } from "./const";
+export { EAlign } from "./enums";

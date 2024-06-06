@@ -1,8 +1,8 @@
-import type { MessageType, Size } from "@/styles";
-import clsx from "clsx";
-import type React from "react";
-
+import { sizeMapping } from "@/constants"
+import type MessageType from "@/constants/types/common";
+import type Size from "@/constants/types/size";
 import styles from "@/styles/modules/message.module.scss";
+import clsx from "clsx";
 
 interface Props {
 	types: MessageType;
@@ -16,16 +16,6 @@ function Message({ types = "Info", size = "medium", content }: Props) {
 		warning: "Warning",
 		error: "Error",
 		info: "Info",
-	}
-
-	const sizeMapping = {
-		tiny: "Tiny",
-		small: "Small",
-		medium: "Medium",
-		large: "Large",
-		"large-x": "LargeX",
-		"large-xx": "Large2X",
-		"large-xxx": "Large3X",
 	}
 
 	const newType = (key: string) => typeMapping[key] || "Info";
