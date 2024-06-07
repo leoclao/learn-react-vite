@@ -10,7 +10,7 @@ type Props = {
 }
 
 function Progress({ size = "medium", value = 0 }: Props) {
-  const newSize = (key: string) => sizeMapping[key];
+  const newSize = (key: string) => sizeMapping[key] || "Medium";
   return (
     <progress
       className={clsx(

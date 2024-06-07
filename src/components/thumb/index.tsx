@@ -7,7 +7,7 @@ interface Props extends compProps {
   title?: string;
   alt?: string;
   isHideFigCap?: boolean;
-  loading?: React.ReactNode;
+  loading?: "lazy" | "eager";
 }
 
 function Thumb({ className, ratio, src, desc, title, alt, isHideFigCap = false, loading }: Props) {

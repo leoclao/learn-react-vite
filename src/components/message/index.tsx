@@ -11,8 +11,8 @@ interface Props {
 }
 
 function Message({ types = "Info", size = "medium", content }: Props) {
-
-	const newType = (key: string) => messageStatusMapping[key] || "Info";
+	type MessageTypeKeys = keyof typeof messageStatusMapping;
+	const newType = (key: MessageTypeKeys) => messageStatusMapping[key] || "Info";
 	const newSize = (key: string) => sizeMapping[key] || "Medium";
 
 	const className = clsx(
