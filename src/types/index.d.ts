@@ -1,0 +1,1 @@
+export { compProps } from "./interface";

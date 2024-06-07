@@ -1,4 +1,4 @@
-import { Button, ButtonLink, Card, DescLists, Grid, List, Masonry, Message, Progress, UnorderedLists } from "@/components";
+import { Button, ButtonLink, Card, DescLists, Grid, List, Masonry, Message, Progress, Thumb, UnorderedLists } from "@/components";
 import { RibbonContainer } from "@/container";
 import { FilterableProduct, Profile } from "@/features";
 import { useWindowResize } from "@/hooks";
@@ -143,9 +143,10 @@ function App() {
 					data={products}
 				/>
 				<Message types="error" size="small" content="Message demo" />
-				<Progress value={50} />
+				<Progress value={50} size="large" />
 				{/* Demo Progress */}
 				<FilterableProduct products={PRODUCTS_LIST} />
+				<Thumb className="Thumb" isHideFigCap src="https://i.imgur.com/yXOvdOSs.jpg" desc="Desc" title="Desc" />
 				{users && (
 					<RibbonContainer>
 						<Grid cols={4} gap={2}>

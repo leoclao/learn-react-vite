@@ -1,3 +1,29 @@
+.Base {
+  --progress-overflow: var(--overflow-hidden);
+  background-color: var(--progress-bg-color);
+  border: var(--progress-border-top-width, var(--progress-border-width)) var(--progress-border-right-width, var(--progress-border-width)) var(--progress-border-bottom-width, var(--progress-border-width)) var(--progress-border-left-width, var(--progress-border-width)) var(--progress-border-top-style, var(--progress-border-style)) var(--progress-border-right-style, var(--progress-border-style)) var(--progress-border-bottom-style, var(--progress-border-style)) var(--progress-border-left-style, var(--progress-border-style)) var(--progress-border-top-color, var(--progress-border-color)) var(--progress-border-right-color, var(--progress-border-color)) var(--progress-border-bottom-color, var(--progress-border-color)) var(--progress-border-left-color, var(--progress-border-color));
+  border-radius: var(--progress-border-top-left-radius, var(--progress-border-radius)) var(--progress-border-top-right-radius, var(--progress-border-radius)) var(--progress-border-bottom-left-radius, var(--progress-border-radius)) var(--progress-border-bottom-right-radius, var(--progress-border-radius));
+  width: var(--progress-width, 100%);
+  height: var(--progress-height, auto);
+  overflow: var(--progress-overflow-x, var(--progress-overflow)) var(--progress-overflow-y, var(--progress-overflow));
+
+  &::-webkit-progress-inner-element {
+    background-color: var(--progress-inner-element-bg-color);
+  }
+
+  &::-webkit-progress-bar {}
+
+  &::-webkit-progress-value {}
+}
+
+.Medium {
+  --progress-width: 12px;
+}
+
+.Large {
+  --progress-height: 16px;
+}
+
 .clipPath {
   width: 100%;
   height: 100%;

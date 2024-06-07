@@ -1,1 +1,1 @@
-export { sizeMapping } from "./mapping";
+export { sizeMapping, messageStatusMapping } from "./mapping";

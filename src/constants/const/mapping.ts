@@ -7,3 +7,9 @@ export const sizeMapping = {
   "large-xx": "Large2X",
   "large-xxx": "Large3X",
 }
+
+export const messageStatusMapping = {
+  warning: "Warning",
+  error: "Error",
+  info: "Info",
+}

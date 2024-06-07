@@ -1,16 +1,21 @@
-interface Props {
-  className?: string;
+import type { compProps } from "@/types";
+
+interface Props extends compProps {
   ratio?: string;
-  imgClassName?: string;
   src: string;
-  desc: string;
+  desc?: string;
+  title?: string;
+  alt?: string;
+  isHideFigCap?: boolean;
+  loading?: React.ReactNode;
 }
 
-function Thumb({ className, ratio, imgClassName, src, desc }: Props) {
+function Thumb({ className, ratio, src, desc, title, alt, isHideFigCap = false, loading }: Props) {
   return (
-    <div className={className}>
-      <img className={imgClassName} src={src} alt={desc} />
-    </div>
+    <figure className={className}>
+      <img src={src} alt={alt} title={title} loading={loading} />
+      {desc && !isHideFigCap && <figcaption>{desc}</figcaption>}
+    </figure>
   );
 }
 
