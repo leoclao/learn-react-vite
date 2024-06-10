@@ -1,2 +1,1 @@
-export { sizeMapping } from "./const";
-export { EAlign } from "./enums";
+export { sizeMapping, messageStatusMapping } from "./mapping";

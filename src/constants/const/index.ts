@@ -1,1 +1,0 @@
-export { sizeMapping } from "./mapping";

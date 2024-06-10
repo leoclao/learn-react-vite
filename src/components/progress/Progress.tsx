@@ -1,3 +1,4 @@
+import { sizeMapping } from "@/constants"
 import type Size from "@/constants/types/size";
 import styles from "@/styles/modules/progress.module.scss";
 import clsx from "clsx";
@@ -9,11 +10,12 @@ type Props = {
 }
 
 function Progress({ size = "medium", value = 0 }: Props) {
+  const newSize = (key: string) => sizeMapping[key] || "Medium";
   return (
     <progress
       className={clsx(
-        styles.base,
-        size && styles[size],
+        styles.Base,
+        size && styles[`${newSize(size)}`],
       )}
       value={value}
       max={100}
