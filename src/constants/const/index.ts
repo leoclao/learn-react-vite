@@ -1,1 +1,0 @@
-export { sizeMapping, messageStatusMapping } from "./mapping";

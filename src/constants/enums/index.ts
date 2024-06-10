@@ -1,1 +1,0 @@
-export { EAlign } from "./alignment";

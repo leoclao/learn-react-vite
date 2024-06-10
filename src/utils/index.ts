@@ -1,1 +1,1 @@
-export { isObject, isStringOrStringArray } from "./function";
+export { isObject, isStringOrStringArray } from "./CheckType";
