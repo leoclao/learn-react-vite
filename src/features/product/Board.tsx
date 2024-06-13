@@ -4,6 +4,14 @@ import Row from "./Row";
 
 import styles from "@/styles/modules/product.module.scss";
 
+/**
+ * Renders a board component displaying products based on filter criteria.
+ * 
+ * @param {Object[]} products - The list of products to display.
+ * @param {string} filterText - The text used to filter products by name.
+ * @param {boolean} inStockOnly - Indicates whether to display only products in stock.
+ * @returns {JSX.Element} A JSX element representing the board component with filtered products.
+ */
 function Board({ products, filterText, inStockOnly }) {
 	const rows = [];
 	let lastCategory = null;

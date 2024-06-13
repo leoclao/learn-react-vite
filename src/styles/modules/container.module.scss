@@ -1,66 +1,59 @@
+/* The `.container` class in the SCSS code snippet provided is defining styles for a container element.
+Here's a breakdown of what each part of the code is doing: */
 .container {
   box-sizing: border-box;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
 
-  // sm screen device
   @media screen and (min-width: 640px) {
     width: clamp(608px, 20vw, 100vw);
   }
 
-  // md screen device
   @media screen and (min-width: 768px) {
     max-width: 768px;
   }
 
-  // lg screen device
   @media screen and (min-width: 1024px) {
     max-width: 1024px;
   }
 
-  // xl screen device
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
   }
 
-  // xxl screen device
   @media screen and (min-width: 1536px) {
     max-width: 1536px;
   }
 }
 
-// fluid container
+/* The `.container--fluid` class in the SCSS code snippet is defining styles for a fluid container
+element. Here's a breakdown of what each part of the code is doing: */
 .container--fluid {
   width: 100%;
   box-sizing: border-box;
   padding: 0 1rem;
 
-  // sm screen device
   @media screen and (min-width: 640px) {
     padding-right: clamp(1rem, 3vw, 64rem);
     padding-left: clamp(1rem, 3vw, 64rem);
   }
 
-  // md screen device
   @media screen and (min-width: 768px) {
     padding-right: clamp(1rem, 3vw, 64rem);
     padding-left: clamp(1rem, 3vw, 64rem);
   }
 
-  // lg screen device
   @media screen and (min-width: 1024px) {
     padding-right: clamp(1rem, 3vw, 64rem);
     padding-left: clamp(1rem, 3vw, 64rem);
   }
 
-  // xl screen device
   @media screen and (min-width: 1280px) {
     padding-right: clamp(1rem, 3vw, 64rem);
     padding-left: clamp(1rem, 3vw, 64rem);
   }
 
-  // xxl screen device
   @media screen and (min-width: 1536px) {
     padding-right: clamp(1rem, 3vw, 64rem);
     padding-left: clamp(1rem, 3vw, 64rem);

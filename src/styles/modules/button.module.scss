@@ -1,3 +1,6 @@
+/* The `.base` class in the SCSS code snippet provided is defining a set of CSS properties using custom
+properties (CSS variables) for a button element. Each CSS property is set using a custom property
+with a fallback value in case the custom property is not defined. */
 .base {
   align-items: var(--button-align-item, center);
   background-color: var(--button-background-color, #007bff);
@@ -21,6 +24,10 @@
   width: var(--button-width, auto);
 }
 
+/* The `.medium` class in the SCSS code snippet is defining custom properties (CSS variables) specific
+to a medium-sized button style. It sets values for `--button-font-size`, `--button-height`, and
+padding properties (`--button-padding-top`, `--button-padding-right`, `--button-padding-bottom`,
+`--button-padding-left`). */
 .medium {
   --button-font-size: medium;
   --button-height: 2.25rem;
@@ -36,6 +43,11 @@
   }
 }
 
+/* The `.large` class in the SCSS code snippet is defining custom properties (CSS variables) specific
+to a large-sized button style. It sets values for `--button-font-size`, `--button-height`, and
+padding properties (`--button-padding-top`, `--button-padding-right`, `--button-padding-bottom`,
+`--button-padding-left`). These custom properties define the styling attributes for a button element
+with the class `.large`, such as the font size, height, and padding values. */
 .large {
   --button-font-size: medium;
   --button-height: 3rem;
@@ -45,6 +57,10 @@
   --button-padding-left: 1.25rem;
 }
 
+/* The `.hollow` class in the SCSS code snippet is defining custom properties (CSS variables) specific
+to a button with a hollow or outline style. It sets values for various custom properties related to
+the button's background color, border styles, border widths, border colors, text color, and border
+radius. */
 .hollow {
   --button-background-color: transparent;
   --button-border-style-top: solid;

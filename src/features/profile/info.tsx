@@ -12,6 +12,13 @@ interface Props {
 	info?: InfoItem[] | null;
 }
 
+/**
+ * Renders a list of information items.
+ * 
+ * @param className - Additional CSS class for styling.
+ * @param info - An array of information items to display.
+ * @returns JSX element displaying the list of information items.
+ */
 export default function Info({ className, info = null }: Props) {
 	if (!info) {
 		return null;

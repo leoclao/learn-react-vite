@@ -1,19 +1,27 @@
 import { useEffect, useState } from "react";
 
+/**
+ * Custom React hook that tracks the window size by updating the state whenever the window is resized.
+ * 
+ * @returns An object containing the width and height of the window
+ */
 export default function useWindowResize() {
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  })
 
   const handleResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight
+    });
   };
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    handleResize();
     return () => window.removeEventListener("resize", handleResize);
-  }, [handleResize]);
+  }, []);
 
-  return { width, height };
+  return windowSize;
 }

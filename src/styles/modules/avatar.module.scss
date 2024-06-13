@@ -1,3 +1,6 @@
+/* The `.base` block in the SCSS code is defining a CSS rule set for an element with the class name
+"base". Within this block, there is a nested rule for `img` elements that specifies the following
+styles: */
 .base {
   position: relative;
 
@@ -11,6 +14,9 @@
   }
 }
 
+/* The `.large` block in the SCSS code is defining a CSS rule set for elements with the class name
+"large". Within this block, there are nested rules for different variations of aspect ratios for the
+elements with the class "large". */
 .large {
   width: 9rem;
   height: 9rem;

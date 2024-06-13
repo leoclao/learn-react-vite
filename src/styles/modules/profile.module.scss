@@ -1,3 +1,7 @@
+/* This SCSS code is styling an element with the class `.filterable`. It sets the display property to
+`flex`, which allows the element to be displayed as a flex container. The `flex-direction` property
+is set to `column`, which arranges the flex items vertically. The `gap` property is used to create
+space between the flex items, with a gap of `1rem` specified in this case. */
 .filterable {
   display: flex;
   flex-direction: column;
