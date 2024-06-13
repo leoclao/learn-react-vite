@@ -1,4 +1,4 @@
-import { messageStatusMapping, sizeMapping } from "@/constants"
+import { sizeMapping, statusMapping } from "@/constants"
 import type MessageType from "@/constants/types/common";
 import type Size from "@/constants/types/size";
 import styles from "@/styles/modules/message.module.scss";
@@ -11,8 +11,8 @@ interface Props {
 }
 
 function Message({ types = "Info", size = "medium", content }: Props) {
-	type MessageTypeKeys = keyof typeof messageStatusMapping;
-	const newType = (key: MessageTypeKeys) => messageStatusMapping[key] || "Info";
+	type MessageTypeKeys = keyof typeof statusMapping;
+	const newType = (key: MessageTypeKeys) => statusMapping[key] || "Info";
 	const newSize = (key: string) => sizeMapping[key] || "Medium";
 
 	const className = clsx(

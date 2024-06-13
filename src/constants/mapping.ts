@@ -8,7 +8,7 @@ export const sizeMapping = {
   "large-xxx": "Large3X",
 }
 
-export const messageStatusMapping = {
+export const statusMapping = {
   warning: "Warning",
   error: "Error",
   info: "Info",
