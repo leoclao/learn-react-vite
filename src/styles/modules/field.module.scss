@@ -1,12 +1,24 @@
+/* The `.base` class is using CSS Flexbox properties to style its layout. Specifically, `display:
+flex;` sets the element as a flex container, and `flex-direction: column;` arranges the flex items
+vertically in a column direction within the flex container. This means that the elements with the
+`.base` class will be displayed as a column layout, stacking vertically one after another. */
 .base {
   display: flex;
   flex-direction: column;
 }
 
+/* The CSS rule `.container { position: relative; }` is setting the positioning context for elements
+with the class `.container` to be relative to their normal position in the document flow. This means
+that any absolutely positioned child elements within the `.container` will be positioned relative to
+the `.container` itself, rather than to the nearest ancestor with a defined position (such as
+`absolute`, `fixed`, or `relative`). */
 .container {
   position: relative;
 }
 
+/* The `.Label` CSS rule is styling elements with the class `.Label`. It sets the font size to `1rem`
+and the font weight to `600`, making the text appear larger and bolder. This rule is defining the
+visual appearance of elements with the `.Label` class in the document. */
 .Label {
   font-size: 1rem;
   font-weight: 600;

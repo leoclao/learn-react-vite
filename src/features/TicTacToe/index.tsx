@@ -1,20 +1,25 @@
 import { Button } from "@/components/Button";
+import Grid from "@/components/Grid";
 import styles from "@/styles/modules/board.module.scss";
 import clsx from "clsx";
 import React, { useState } from "react";
-import Grid from "../../components/Grid";
-// import Message from "../message";
 
 interface Props {
 	cols: number;
 	rows: number;
 }
 
+/**
+ * Represents a Tic-Tac-Toe board component.
+ * 
+ * @param {Props} cols - The number of columns in the board.
+ * @param {Props} rows - The number of rows in the board.
+ * @returns {JSX.Element} A React component representing the Tic-Tac-Toe board.
+ */
 function Board({ cols, rows }: Props) {
 	const [xIsNext, setXIsNext] = useState(true);
 	const [squares, setSquares] = useState(Array(rows).fill(null));
 
-	// const items = Array.from({ length: 352 }, (v, i) => `Item ${i + 1}`);
 	const items = Array.from({ length: cols * rows }, (v, i) => `Ô thứ ${i + 1}`);
 
 	function handlePlayerClick(i) {
@@ -62,7 +67,6 @@ function Board({ cols, rows }: Props) {
 	function checkBoard(board) {
 		let result = null;
 
-		// Kiểm tra các dòng
 		for (let i = 0; i < rows; i++) {
 			const row = board[i];
 			console.log(`row ${row}`);
@@ -73,7 +77,6 @@ function Board({ cols, rows }: Props) {
 			}
 		}
 
-		// Kiểm tra các cột
 		for (let j = 0; j < cols; j++) {
 			const col = [];
 
@@ -88,7 +91,6 @@ function Board({ cols, rows }: Props) {
 			}
 		}
 
-		// Kiểm tra các đường chéo từ trái sang phải
 		for (let k = 0; k <= rows + cols - 2; k++) {
 			const diag = [];
 
@@ -107,7 +109,6 @@ function Board({ cols, rows }: Props) {
 			}
 		}
 
-		// Kiểm tra các đường chéo từ phải sang trái
 		for (let k = 0; k <= rows + cols - 2; k++) {
 			const diag = [];
 

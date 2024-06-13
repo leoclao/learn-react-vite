@@ -1,3 +1,4 @@
+/* This SCSS code defines a grid layout system with customizable column numbers and gap sizes. */
 .grid {
   --grid-temp-cols: 0;
   --row-gap: 0;
@@ -57,7 +58,6 @@
       --grid-temp-cols: 12;
     }
 
-    // grid 24
     &-13 {
       --grid-temp-cols: 13;
     }
@@ -116,6 +116,10 @@
   }
 }
 
+/* This part of the SCSS code defines a set of classes within the `.gap` selector that can be used to
+set specific row and column gap sizes for a grid layout. Each numbered class (`.gap1`, `.gap2`,
+`.gap3`, etc.) corresponds to a specific row and column gap size defined using custom properties
+`--row-gap` and `--col-gap`. */
 .gap {
   gap: 0px;
 
@@ -150,6 +154,8 @@
   }
 }
 
+/* This SCSS code defines a set of classes within the `.col` selector that can be used to style grid
+columns in a layout. */
 .col {
   &Span {
     &Auto {
@@ -326,6 +332,8 @@
   }
 }
 
+/* This SCSS code defines a grid layout system called `.masonry` with customizable column numbers and
+gap sizes. */
 .masonry {
   --msr-grid-cols: 0;
   --msr-grid-gap: 0;

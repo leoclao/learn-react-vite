@@ -1,8 +1,12 @@
+/* The `.base` class is setting the padding to 0.75rem and the background color to whitesmoke for
+elements with this class applied to them. */
 .base {
   padding: .75rem;
   background-color: whitesmoke;
 }
 
+/* The `.error` class is defining styles for elements with this class applied to them. It sets the text
+color to brown and the font size to 14 pixels. */
 .error {
   color: brown;
   font-size: 14px;

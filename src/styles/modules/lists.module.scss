@@ -1,6 +1,9 @@
+/* `.Base {}` is defining a CSS class selector named `.Base`. This selector can be used to apply styles
+to HTML elements with the class attribute set to "Base". */
 .Base {}
 
-// Unordered List Marker
+/* This SCSS code is defining a nested structure for styling list items with different list-style-types
+under the `.Marker` class selector. */
 .Marker {
   &None {
     list-style-type: none;

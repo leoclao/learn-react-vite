@@ -13,9 +13,16 @@ interface Props {
 	showInfo?: boolean;
 }
 
+/**
+ * Profile component to display user profile information.
+ * 
+ * @param {string} className - Additional CSS class for styling.
+ * @param {object} profileData - Object containing user profile data.
+ * @param {boolean} showInfo - Flag to determine if additional info should be displayed.
+ * @returns {JSX.Element} Rendered Profile component.
+ */
 function Profile({ className, profileData, showInfo = false }: Props) {
 	const [filterText, setFilterText] = useState("");
-	// const [inStockOnly, setInStockOnly] = useState(false);
 
 	return (
 		<Card className={clsx(styles.filterable)}>
