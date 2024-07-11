@@ -10,7 +10,13 @@ const users = [
 		id: 1,
 		fullName: "Jackie Dao",
 		nickName: "JD",
-		avatar: "https://i.imgur.com/yXOvdOSs.jpg",
+		avatar: [
+			{
+				domain: "https://i.imgur.com",
+				id: "yXOvdOSs",
+				type: "jpg",
+			}
+		],
 		avatarSize: "large",
 		avatarRatio: "1x1",
 		info: [
