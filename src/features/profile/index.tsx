@@ -3,7 +3,7 @@ import styles from "@/styles/modules/profile.module.scss";
 import type Hide from "@/utils";
 import clsx from "clsx";
 import { useId, useState } from "react";
-import Info from "./Info";
+import Info from "./info";
 
 type IsShowFull = Hide extends { [K in keyof HTMLVideoElement]: false } ? true : false;
 

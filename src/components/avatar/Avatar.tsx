@@ -8,6 +8,7 @@ import styles from "@/styles/modules/avatar.module.scss";
  * and ariaDescribedby.
  */
 import type { Ratio, Size } from "@/utils"
+import { getImageUrl } from "@/utils";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 
@@ -43,7 +44,7 @@ function Avatar({
   return (
     <div className={clsx(styles.base, className, styles[`${newSize}${newRatio}`])}>
       <img
-        src={src}
+        src={getImageUrl(src)}
         alt={alt}
         title={title}
         longdesc={longdesc}
