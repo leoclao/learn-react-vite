@@ -2268,9 +2268,9 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-error-boundary: ^4.0.13
-    react-hook-form: ^7.51.5
+    react-hook-form: ^7.52.0
     react-responsive: ^10.0.0
-    sass: ^1.77.5
+    sass: ^1.77.4
     typedoc: ^0.25.13
     typescript: ^5.4.5
     vite: ^5.2.12
@@ -3213,12 +3213,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.51.5":
-  version: 7.51.5
-  resolution: "react-hook-form@npm:7.51.5"
+"react-hook-form@npm:^7.52.0":
+  version: 7.52.1
+  resolution: "react-hook-form@npm:7.52.1"
   peerDependencies:
-    react: ^16.8.0 || ^17 || ^18
-  checksum: 5b13f99a125d92ee618f2d4e218d5ec854f8cac1b568e83b4b125efb002cc79eef0f5c06b54015c78e16a830cf1ea356a646e8c6abb00b7ca8225dba9a92091e
+    react: ^16.8.0 || ^17 || ^18 || ^19
+  checksum: 8/224fec214c5c7093b6949bc0a4fce3cf9b7a567a2f36dc3c7feeb1e721c5cccbd21f0f0ab19aa1f5f912014264f9c2224181370007609693b6c5ef6778f59ca5
   languageName: node
   linkType: hard
 
