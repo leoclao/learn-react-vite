@@ -35,4 +35,9 @@ elements with the class "large". */
     width: 9rem;
     aspect-ratio: 9 / 16;
   }
+
+  &16x9 {
+    width: 9rem;
+    aspect-ratio: 16 / 9;
+  }
 }

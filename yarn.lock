@@ -2318,10 +2318,10 @@ __metadata:
     react-error-boundary: "npm:^4.0.13"
     react-hook-form: "npm:^7.52.1"
     react-responsive: "npm:^10.0.0"
-    sass: "npm:^1.77.7"
-    typedoc: "npm:^0.26.4"
+    sass: "npm:^1.77.8"
+    typedoc: "npm:^0.26.5"
     typescript: "npm:^5.5.3"
-    vite: "npm:^5.3.3"
+    vite: "npm:^5.3.4"
     vite-tsconfig-paths: "npm:^4.3.2"
   languageName: unknown
   linkType: soft
@@ -3518,16 +3518,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.77.7":
-  version: 1.77.7
-  resolution: "sass@npm:1.77.7"
+"sass@npm:^1.77.8":
+  version: 1.77.8
+  resolution: "sass@npm:1.77.8"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 6cacbf4b5165d30a9be0f09438aed85ff0617e5087442e65c23c8464750ff1b9988855a58f36b420b62f992d1e82403f99810aba7731519d3d026847e21a5635
+  checksum: 2bfd62794070352c804f949e69bd8bb5b4ec846deeb924251b2c3f7b503170fb1ae186f513f0166907749eb34e0277dee747edcb78c886fb471aac01be1e864c
   languageName: node
   linkType: hard
 
@@ -3870,9 +3870,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc@npm:^0.26.4":
-  version: 0.26.4
-  resolution: "typedoc@npm:0.26.4"
+"typedoc@npm:^0.26.5":
+  version: 0.26.5
+  resolution: "typedoc@npm:0.26.5"
   dependencies:
     lunr: "npm:^2.3.9"
     markdown-it: "npm:^14.1.0"
@@ -3883,7 +3883,7 @@ __metadata:
     typescript: 4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x
   bin:
     typedoc: bin/typedoc
-  checksum: 41da973bc42bcce86b0fdbff69673f5d51f3a753109aed670807f600d26ab5b557ebbc965d6a2d13c1813b79008be4e310bf8c4c28c59e01eb0ebff56f29f633
+  checksum: c3ca06e7496276d6c14af6c9ed7afe48477117093fa4723b30c73b902adba5821fd58bb19139be9322980de0f279ec688600ac4d6da31792c1654675068f1352
   languageName: node
   linkType: hard
 
@@ -3995,9 +3995,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.3.3":
-  version: 5.3.3
-  resolution: "vite@npm:5.3.3"
+"vite@npm:^5.3.4":
+  version: 5.3.4
+  resolution: "vite@npm:5.3.4"
   dependencies:
     esbuild: "npm:^0.21.3"
     fsevents: "npm:~2.3.3"
@@ -4031,7 +4031,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: a796872e1d11875d994615cd00da185c80eeb7753034d35c096050bf3c269c02004070cf623c5fe2a4a90ea2f12488e6f9d13933ec810f117f1b931e1b5e3385
+  checksum: 604a1c8698bcf09d6889533c552f20137c80cb5027e9e7ddf6215d51e3df763414f8712168c22b3c8c16383aff9447094c05f21d7cca3c115874ff9d12e1538e
   languageName: node
   linkType: hard
 
