@@ -7,8 +7,8 @@ import styles from "@/styles/modules/avatar.module.scss";
  * image inside a div element with optional props such as className, size, src, alt, title, longdesc,
  * and ariaDescribedby.
  */
-import type { Ratio, Size } from "@/utils"
-import { getImageUrl } from "@/utils";
+import type { Ratio, Size } from "@/utils";
+import getImageUrl from "@/utils/get-img-url";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 
@@ -33,6 +33,7 @@ function Avatar({
   longdesc,
   ariaDescribedby
 }: Props) {
+
   const [newSize, setNewSize] = useState("");
   const [newRatio, setNewRatio] = useState("");
 
@@ -40,11 +41,20 @@ function Avatar({
     if (size !== undefined) setNewSize(size);
     if (ratio !== undefined) setNewRatio(ratio);
   });
+  // const newSrc = () => {
+  //   src.map((item) => {
+  //     console.log(getImageUrl(item));
+  //   })
+  // }
+  // src.map((item) => {
+  //   console.log(getImageUrl(item.domain));
+  // })
+
 
   return (
     <div className={clsx(styles.base, className, styles[`${newSize}${newRatio}`])}>
       <img
-        src={getImageUrl(src)}
+        src={getImageUrl(src[0])}
         alt={alt}
         title={title}
         longdesc={longdesc}

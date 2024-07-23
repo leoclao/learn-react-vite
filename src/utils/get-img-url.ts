@@ -1,16 +1,18 @@
 /**
- * Returns the complete image URL with parameters based on the provided inputs.
- * 
- * @param {string} url - The base URL where the image is located.
- * @param {string} directory - The directory within the base URL where the image is stored.
- * @param {string} name - The name of the image file.
- * @param {object} params - Additional parameters to be added to the URL (key-value pairs).
- * @returns {string} The complete image URL with parameters.
+ * Constructs an image URL based on the provided URL object.
+ * @param {object} url - The URL object containing domain, directory, id, size, name, format, and query parameters.
+ * @returns {string} The final image URL with all parameters included.
  */
 export default function getImageUrl(url) {
-  let urlWithParams = `${url?.domain}/${url?.directory}/${url?.name}${url?.id}`;
-  for (const [key, value] of Object.entries(url?.params)) {
-    urlWithParams += `&${key}=${value}`;
-  }
-  return urlWithParams;
+  const urlDirectory = url?.directory && `/${url?.directory}`;
+  const urlId = url?.id && `/${url?.id}`;
+  const urlSize = url?.size && `/${url?.size}`;
+  const urlName = url?.name && `/${url?.name}`;
+  const urlFormat = url?.format && `.${url?.format}`;
+  const urlWithParams = url?.domain + urlDirectory + urlId + urlSize + urlName + urlFormat;
+  const queryString = Object.entries(url?.query).map(([key, value]) => `${key}=${value}`).join('&');
+
+  const urlFinal = `${urlWithParams}${queryString ? `?${queryString}` : ''}`;
+
+  return urlFinal;
 }
