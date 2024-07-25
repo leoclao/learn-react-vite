@@ -1,4 +1,3 @@
-typescript
 /**
  * Asynchronous function to check the type of an image from a given source URL.
  * @param {Object} src - The URL source of the image to check.
