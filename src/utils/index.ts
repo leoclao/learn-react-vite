@@ -1,2 +1,2 @@
-export { isObject, isStringOrStringArray } from "./CheckType";
-export { default as getImageUrl } from "./get-img-url";
+export { isObject, isStringOrStringArray } from "./check-type";
+export { default as buildImageUrl } from "./build-img-url";

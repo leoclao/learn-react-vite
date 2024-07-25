@@ -1,0 +1,29 @@
+//
+::-webkit-scrollbar {
+  background-color: var(--webkit-scrollbar-bg-color, aliceblue);
+}
+
+// button direction
+::-webkit-scrollbar-button {
+  background-color: var(--webkit-scrollbar-button-bg-color, aliceblue);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--webkit-scrollbar-track-bg-color, aliceblue);
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--webkit-scrollbar-track-piece-bg-color, aliceblue);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--webkit-scrollbar-thumb-bg-color, aliceblue);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--webkit-scrollbar-corner-bg-color, aliceblue);
+}
+
+::-webkit-resizer {
+  background-color: var(--webkit-scrollbar-resizer-bg-color, aliceblue);
+}
