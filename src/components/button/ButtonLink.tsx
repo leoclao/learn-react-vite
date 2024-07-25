@@ -27,7 +27,7 @@ function ButtonLink({
   const newClassName = clsx(
     styles.base,
     styles[`${size}`],
-    hollow && styles.hollow
+    hollow && styles.hollow,
   );
 
   return (

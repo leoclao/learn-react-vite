@@ -1,7 +1,6 @@
-// CardMedia
-import type React from "react";
-import { MediaType, Ratio } from "@/utils";
+import { type MediaType, Ratio } from "@/utils";
 import clsx from "clsx";
+import type React from "react";
 
 interface Props {
   className?: string;
@@ -9,27 +8,30 @@ interface Props {
   type?: MediaType;
   url?: string;
   desc?: string;
+  captions?: string;
 }
 
-function CardMedia({ className, ratio, type = 'image' }: Props) {
+function CardMedia({ className, ratio, type, captions }: Props) {
   const mediaDom = () => {
     switch (type) {
-      case 'image':
-        return <img className={ratio} src={url} alt={desc} />;
-      case 'video':
-        return <video className={ratio} src={url} />;
-      case 'audio':
-        return <audio src={url} />;
+      case "video":
+        return (
+          <video className={clsx(ratio)} src={url} muted controls>
+            {captions && <track kind="captions" src={captions} />}
+          </video>
+        );
+      case "audio":
+        return (
+          <audio src={url} alt={desc} muted controls>
+            {captions && <track kind="captions" src={captions} />}
+          </audio>
+        );
       default:
-        return null;
+        return <img className={clsx(ratio)} src={url} alt={desc} />;
     }
-  }
+  };
 
-  return (
-    <div className={className}>
-      {mediaDom}
-    </div>
-  );
+  return <div className={className}>{mediaDom()}</div>;
 }
 
 export default CardMedia;

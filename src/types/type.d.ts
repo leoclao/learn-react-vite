@@ -4,15 +4,15 @@ export type ContentDirection = "ltr" | "rtl" | "auto";
 export type ContainerLayout = "fluid" | "swipe" | "default";
 // Display Zone
 export type DisplayZone =
-	| "top"
-	| "right"
-	| "bottom"
-	| "left"
-	| "top-right"
-	| "bottom-right"
-	| "bottom-left"
-	| "top-left"
-	| "center";
+  | "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "top-right"
+  | "bottom-right"
+  | "bottom-left"
+  | "top-left"
+  | "center";
 
 // Gradient Linear direction
 // Default: to top, to right, to bottom, to left
@@ -21,21 +21,21 @@ export type DisplayZone =
 // Angle value: "angle" | number
 export type GradientLinearDir = "to top" | "to right" | "to bottom" | "to left";
 export type GradientLinearDirDiagonal =
-	| "to top right"
-	| "to bottom right"
-	| "to bottom left"
-	| "to top left";
+  | "to top right"
+  | "to bottom right"
+  | "to bottom left"
+  | "to top left";
 export type GradientLinearDirAngles = number;
 // Radial Gradients:
 // Shape: circle, ellipse[default]
 // Size: closest-side, farthest-side, closest-corner, farthest-corner
 export type RadialGradientShapeSize =
-	| "circle"
-	| "ellipse"
-	| "closest-side"
-	| "farthest-side"
-	| "closest-corner"
-	| "farthest-corner";
+  | "circle"
+  | "ellipse"
+  | "closest-side"
+  | "farthest-side"
+  | "closest-corner"
+  | "farthest-corner";
 
 // Gradient types: Linear, Radial, Conic
 export type GradientType = "linear" | "radial" | "conic";
@@ -64,9 +64,33 @@ export type ObjectLayout = "horizontal" | "vertical" | "variant";
 export type ProfileHidden = "name" | "nickName" | "avatar" | "info";
 
 // Ratio
-export type Ratio = "1x1" | "1x2" | "3x2" | "3x4" | "4x3" | "9x16" | "16x9" | "16x10";
+export type Ratio =
+  | "1x1"
+  | "1x2"
+  | "3x2"
+  | "3x4"
+  | "4x3"
+  | "9x16"
+  | "16x9"
+  | "16x10";
 
 // Size
-export type Size = "tiny" | "small" | "medium" | "large" | "large-x" | "large-xx" | "large-xxx";
+export type Size =
+  | "tiny"
+  | "small"
+  | "medium"
+  | "large"
+  | "large-x"
+  | "large-xx"
+  | "large-xxx";
 // Size plus
-export type SizePlus = "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "xxxl" | "o-xxxl" | "xo-xxxl";
+export type SizePlus =
+  | "xs"
+  | "sm"
+  | "md"
+  | "lg"
+  | "xl"
+  | "xxl"
+  | "xxxl"
+  | "o-xxxl"
+  | "xo-xxxl";

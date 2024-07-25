@@ -1,27 +1,28 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 /**
  * Custom React hook that tracks the window size by updating the state whenever the window is resized.
- * 
+ *
  * @returns An object containing the width and height of the window
  */
+
 export default function useWindowResize() {
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
-    height: window.innerHeight
-  })
+    height: window.innerHeight,
+  });
 
-  const handleResize = () => {
+  const handleResize = useCallback(() => {
     setWindowSize({
       width: window.innerWidth,
-      height: window.innerHeight
+      height: window.innerHeight,
     });
-  };
+  }, []); // No dependencies, so the function is memoized once
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [handleResize]); // handleResize is now stable and won't change on re-renders
 
   return windowSize;
 }

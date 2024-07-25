@@ -10,7 +10,16 @@ interface Props extends compProps {
   loading?: "lazy" | "eager";
 }
 
-function Thumb({ className, ratio, src, desc, title, alt, isHideFigCap = false, loading }: Props) {
+function Thumb({
+  className,
+  ratio,
+  src,
+  desc,
+  title,
+  alt,
+  isHideFigCap = false,
+  loading,
+}: Props) {
   return (
     <figure className={className}>
       <img src={src} alt={alt} title={title} loading={loading} />

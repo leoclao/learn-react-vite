@@ -1,5 +1,5 @@
 import styles from "@/styles/modules/progress.module.scss";
-import type { Size } from "@/utils"
+import type { Size } from "@/utils";
 import clsx from "clsx";
 import type React from "react";
 
@@ -7,7 +7,7 @@ type Props = {
   size: Size;
   value: number;
   clipPath: React.ReactNode;
-}
+};
 
 function ProgressClipPath({ size, value = 0, clipPath }: Props) {
   if (value < 0 || value > 100) {
@@ -23,13 +23,7 @@ function ProgressClipPath({ size, value = 0, clipPath }: Props) {
         </clipPath>
       </svg> */}
       {clipPath}
-      <progress
-        className={clsx(
-          styles.clipPath
-        )}
-        value={value}
-        max={100}
-      />
+      <progress className={clsx(styles.clipPath)} value={value} max={100} />
     </div>
   );
 }

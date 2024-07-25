@@ -24,11 +24,16 @@ function Button({
   const newClassName = clsx(
     styles.base,
     styles[`${size}`],
-    hollow && styles.hollow
+    hollow && styles.hollow,
   );
 
   return (
-    <button className={newClassName} onClick={onClick} title={title} type="button">
+    <button
+      className={newClassName}
+      onClick={onClick}
+      title={title}
+      type="button"
+    >
       {label}
     </button>
   );

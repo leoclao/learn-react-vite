@@ -13,10 +13,11 @@ interface Props {
 }
 
 function DescItem({ className, id, term, describes }: Props) {
-
   return (
     <>
-      <dt key={id} id={id} className={className}>{term}</dt>
+      <dt key={id} id={id} className={className}>
+        {term}
+      </dt>
       <dd>{describes}</dd>
     </>
   );

@@ -12,7 +12,6 @@ interface Props {
 }
 
 function ListItem({ className, id, children }: Props) {
-
   return (
     <li key={id} id={id} className={className}>
       {children}

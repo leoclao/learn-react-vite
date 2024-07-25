@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 /**
  * Custom React hook to debounce a value.
- * 
+ *
  * @template T - The type of the value to debounce
  * @param {T} value - The value to debounce
  * @param {number} delay - The delay in milliseconds for debouncing

@@ -12,7 +12,6 @@ interface Props {
 }
 
 function Card({ className, children }: Props) {
-
   // This is use when apply to component api
   // if (layout !== 'variant' && layoutVariant) {
   //   console.warn('`layoutVariant` is only available when `layout` is `variant`')
@@ -30,11 +29,7 @@ function Card({ className, children }: Props) {
   //   }
   // }
 
-  return (
-    <article className={className}>
-      {children}
-    </article>
-  );
+  return <article className={className}>{children}</article>;
 }
 
 export default Card;

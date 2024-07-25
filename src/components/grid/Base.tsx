@@ -11,14 +11,14 @@ interface Props {
 
 function Grid({ cols, gap = "gap", children }: Props) {
   const uniqueId = useId();
-  const newGridClass = 'grid';
+  const newGridClass = "grid";
   const newGapClass = `${gap}`;
   const newColClass = `${cols}`;
 
   const className = clsx(
     styles[newGridClass],
     gap && styles[`gap${newGapClass}`],
-    cols && styles[`gridCols${newColClass}`]
+    cols && styles[`gridCols${newColClass}`],
   );
 
   return (

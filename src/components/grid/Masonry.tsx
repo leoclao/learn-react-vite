@@ -11,16 +11,16 @@ interface Props {
 
 function Masonry({ cols, gap, children }: Props) {
   const uniqueId = useId();
-  const newMasonryClass = 'masonry';
-  const newGapClass = gap ? `Gap${gap}` : 'Gap';
-  const newColsClass = cols ? `Cols${cols}` : 'Cols';
+  const newMasonryClass = "masonry";
+  const newGapClass = gap ? `Gap${gap}` : "Gap";
+  const newColsClass = cols ? `Cols${cols}` : "Cols";
 
   console.log(styles[`masonry${newGapClass}`]);
 
   const className = clsx(
     styles[newMasonryClass],
     styles[`masonry${newGapClass}`],
-    styles[`masonry${newColsClass}`]
+    styles[`masonry${newColsClass}`],
   );
 
   return (

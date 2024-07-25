@@ -30,7 +30,7 @@ function ScrollInfinite() {
       ))}
       <div ref={pageEndRef}>Loading...</div>
     </div>
-  )
+  );
 }
 
 export default ScrollInfinite;

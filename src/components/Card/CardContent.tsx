@@ -7,11 +7,7 @@ interface Props {
 }
 
 function CardContent({ className, children }: Props) {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
+  return <div className={className}>{children}</div>;
 }
 
 export default CardContent;

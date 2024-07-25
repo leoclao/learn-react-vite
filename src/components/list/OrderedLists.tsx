@@ -18,16 +18,28 @@ interface Props {
   data: Array;
 }
 
-function OrderedLists({ className, itemClassName, type = "1", start, data }: Props) {
+function OrderedLists({
+  className,
+  itemClassName,
+  type = "1",
+  start,
+  data,
+}: Props) {
   if (data === null || data === undefined) {
     return console.error("List is not null or undefined");
   }
 
   const items = data.map((item) => (
-    <ListItem key={item.id} id={item.id} className={itemClassName}>{item.title}</ListItem>
+    <ListItem key={item.id} id={item.id} className={itemClassName}>
+      {item.title}
+    </ListItem>
   ));
 
-  return <ol type={type} start={start} className={className}>{items}</ol>;
+  return (
+    <ol type={type} start={start} className={className}>
+      {items}
+    </ol>
+  );
 }
 
 export default OrderedLists;

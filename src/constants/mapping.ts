@@ -11,7 +11,7 @@ export const sizeMapping = {
   "large-x": "LargeX",
   "large-xx": "Large2X",
   "large-xxx": "Large3X",
-}
+};
 
 /* The `export const statusMapping` object in the TypeScript code snippet is defining a mapping between
 status keys and their corresponding values. Each key represents a status category (e.g., warning,
@@ -22,4 +22,4 @@ export const statusMapping = {
   warning: "Warning",
   error: "Error",
   info: "Info",
-}
+};

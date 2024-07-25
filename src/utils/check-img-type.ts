@@ -16,12 +16,11 @@ export default function checkImageType({ src }) {
         const contentType = response.headers.get("content-type");
         setImageType(contentType);
       } catch (e) {
-        console.error('Error fetching the image', e);
+        console.error("Error fetching the image", e);
       }
-    }
+    };
     checkImageType();
   }, [src]);
-
 
   return imageType;
 }
