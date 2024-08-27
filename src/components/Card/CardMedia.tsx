@@ -1,7 +1,7 @@
+import { type MediaType, Ratio } from "@/utils";
+import clsx from "clsx";
 // CardMedia
 import type React from "react";
-import { MediaType, Ratio } from "@/utils";
-import clsx from "clsx";
 
 interface Props {
   className?: string;
@@ -17,9 +17,13 @@ function CardMedia({ className, ratio, type = 'image' }: Props) {
       case 'image':
         return <img className={ratio} src={url} alt={desc} />;
       case 'video':
-        return <video className={ratio} src={url} />;
+        return <video autoPlay {...props} />;
       case 'audio':
-        return <audio src={url} />;
+        return (
+          <audio>
+            <track kind="captions" {...props} />
+          </audio>
+        );
       default:
         return null;
     }
