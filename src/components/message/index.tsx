@@ -1,4 +1,4 @@
-import { sizeMapping, statusMapping } from "@/constants"
+import { sizeMapping, statusMapping } from "@/constants";
 import type MessageType from "@/constants/types/common";
 import type Size from "@/constants/types/size";
 import styles from "@/styles/modules/message.module.scss";
@@ -18,7 +18,7 @@ function Message({ types = "Info", size = "medium", content }: Props) {
 	const className = clsx(
 		styles.Base,
 		types && styles[`${newType(types)}`],
-		size && styles[`${newSize(size)}`]
+		size && styles[`${newSize(size)}`],
 	);
 
 	return <div className={className}>{content}</div>;

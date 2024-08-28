@@ -11,7 +11,7 @@ interface Props {
 
 /**
  * Represents a Tic-Tac-Toe board component.
- * 
+ *
  * @param {Props} cols - The number of columns in the board.
  * @param {Props} rows - The number of rows in the board.
  * @returns {JSX.Element} A React component representing the Tic-Tac-Toe board.

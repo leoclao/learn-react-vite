@@ -13,6 +13,19 @@
 		"fix": "biome fix format --write src",
 		"preview": "vite preview"
 	},
+	"lint-staged": {
+			"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+				"biome check --files-ignore-unknown=true",
+				"biome check --write --no-errors-on-unmatched",
+				"biome check --write --organize-imports-enabled=false --no-errors-on-unmatched",
+				"biome check --write --unsafe --no-errors-on-unmatched",
+				"biome format --write --no-errors-on-unmatched",
+				"biome lint --write --no-errors-on-unmatched"
+			],
+			"*": [
+				"biome check --no-errors-on-unmatched --files-ignore-unknown=true"
+			]
+		},
 	"dependencies": {
 		"clsx": "^2.1.1",
 		"react": "19.0.0-beta-26f2496093-20240514",

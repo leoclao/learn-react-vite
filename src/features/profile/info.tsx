@@ -14,7 +14,7 @@ interface Props {
 
 /**
  * Renders a list of information items.
- * 
+ *
  * @param className - Additional CSS class for styling.
  * @param info - An array of information items to display.
  * @returns JSX element displaying the list of information items.

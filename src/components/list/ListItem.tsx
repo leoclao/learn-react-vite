@@ -6,18 +6,17 @@
  * specified id, className, and children elements.
  */
 interface Props {
-  className?: string;
-  id?: string;
-  children: React.ReactElement;
+	className?: string;
+	id?: string;
+	children: React.ReactElement;
 }
 
 function ListItem({ className, id, children }: Props) {
-
-  return (
-    <li key={id} id={id} className={className}>
-      {children}
-    </li>
-  );
+	return (
+		<li key={id} id={id} className={className}>
+			{children}
+		</li>
+	);
 }
 
 export default ListItem;

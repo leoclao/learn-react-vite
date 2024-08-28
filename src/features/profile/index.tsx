@@ -5,7 +5,9 @@ import clsx from "clsx";
 import { useId, useState } from "react";
 import Info from "./info";
 
-type IsShowFull = Hide extends { [K in keyof HTMLVideoElement]: false } ? true : false;
+type IsShowFull = Hide extends { [K in keyof HTMLVideoElement]: false }
+	? true
+	: false;
 
 interface Props {
 	className?: string;
@@ -15,7 +17,7 @@ interface Props {
 
 /**
  * Profile component to display user profile information.
- * 
+ *
  * @param {string} className - Additional CSS class for styling.
  * @param {object} profileData - Object containing user profile data.
  * @param {boolean} showInfo - Flag to determine if additional info should be displayed.

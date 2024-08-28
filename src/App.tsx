@@ -1,4 +1,16 @@
-import { Button, ButtonLink, Card, DescLists, Grid, List, Masonry, Message, Progress, Thumb, UnorderedLists } from "@/components";
+import {
+	Button,
+	ButtonLink,
+	Card,
+	DescLists,
+	Grid,
+	List,
+	Masonry,
+	Message,
+	Progress,
+	Thumb,
+	UnorderedLists,
+} from "@/components";
 import { RibbonContainer } from "@/container";
 import { FilterableProduct, Profile } from "@/features";
 import { useWindowResize } from "@/hooks";
@@ -21,7 +33,7 @@ const users = [
 				query: {
 					hmac: "_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU",
 				},
-			}
+			},
 		],
 		avatarSize: "large",
 		avatarRatio: "1x1",
@@ -60,18 +72,20 @@ const users = [
 		fullName: "JD",
 		nickName: "JD",
 		// avatar: "https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU",
-		avatar: [{
-			// https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68
-			domain: "https://fastly.picsum.photos/",
-			directory: "id",
-			id: "10",
-			name: "1667",
-			size: "2500",
-			format: "jpg",
-			query: {
-				hmac: "J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68",
+		avatar: [
+			{
+				// https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68
+				domain: "https://fastly.picsum.photos/",
+				directory: "id",
+				id: "10",
+				name: "1667",
+				size: "2500",
+				format: "jpg",
+				query: {
+					hmac: "J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68",
+				},
 			},
-		}],
+		],
 		avatarSize: "large",
 		info: null,
 		avatarRatio: "16x9",
@@ -170,7 +184,13 @@ function App() {
 				<Progress value={50} size="large" />
 				{/* Demo Progress */}
 				<FilterableProduct products={PRODUCTS_LIST} />
-				<Thumb className="Thumb" isHideFigCap src="https://i.imgur.com/yXOvdOSs.jpg" desc="Desc" title="Desc" />
+				<Thumb
+					className="Thumb"
+					isHideFigCap
+					src="https://i.imgur.com/yXOvdOSs.jpg"
+					desc="Desc"
+					title="Desc"
+				/>
 				{users && (
 					<RibbonContainer>
 						<Grid cols={4} gap={2}>

@@ -6,20 +6,21 @@
  * (`<dd>`) element with the `describes` prop.
  */
 interface Props {
-  className?: string;
-  id?: string;
-  term?: string;
-  describes?: string;
+	className?: string;
+	id?: string;
+	term?: string;
+	describes?: string;
 }
 
 function DescItem({ className, id, term, describes }: Props) {
-
-  return (
-    <>
-      <dt key={id} id={id} className={className}>{term}</dt>
-      <dd>{describes}</dd>
-    </>
-  );
+	return (
+		<>
+			<dt key={id} id={id} className={className}>
+				{term}
+			</dt>
+			<dd>{describes}</dd>
+		</>
+	);
 }
 
 export default DescItem;

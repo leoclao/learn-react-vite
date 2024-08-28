@@ -12,13 +12,13 @@ interface Props {
 
 /**
  * SearchBar component for displaying a search bar with filter options.
- * 
+ *
  * @param filterText - The current filter text value.
  * @param inStockOnly - Boolean indicating whether to show only products in stock.
  * @param filterPlaceholder - The placeholder text for the search bar input.
  * @param onFilterTextChange - Function to handle changes in the filter text.
  * @param onInStockOnlyChange - Function to handle changes in the inStockOnly status.
- * 
+ *
  * @returns JSX element representing the search bar component with filter options.
  */
 function SearchBar({
@@ -31,7 +31,12 @@ function SearchBar({
 	return (
 		<form className={clsx(styles["search-bar"])}>
 			<div className={clsx(styles["search-bar__field"])}>
-				<FieldBase id="inputSearchBar" value={filterText} placeHolder={filterPlaceholder} onChange={(e) => onFilterTextChange(e.target.value)} />
+				<FieldBase
+					id="inputSearchBar"
+					value={filterText}
+					placeHolder={filterPlaceholder}
+					onChange={(e) => onFilterTextChange(e.target.value)}
+				/>
 				<label>
 					<input
 						type="checkbox"
