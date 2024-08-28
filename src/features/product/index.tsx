@@ -7,9 +7,9 @@ import SearchBar from "./SearchBar";
 
 /**
  * FilterableProduct component displays a filterable list of products with search and in-stock filter options.
- * 
+ *
  * @param {Object[]} products - The array of products to display.
- * 
+ *
  * @returns {JSX.Element} A React component that renders a filterable product list.
  */
 function FilterableProduct({ products }) {

@@ -6,7 +6,7 @@ import styles from "@/styles/modules/product.module.scss";
 
 /**
  * Renders a board component displaying products based on filter criteria.
- * 
+ *
  * @param {Object[]} products - The list of products to display.
  * @param {string} filterText - The text used to filter products by name.
  * @param {boolean} inStockOnly - Indicates whether to display only products in stock.

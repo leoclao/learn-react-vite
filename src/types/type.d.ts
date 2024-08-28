@@ -64,9 +64,39 @@ export type ObjectLayout = "horizontal" | "vertical" | "variant";
 export type ProfileHidden = "name" | "nickName" | "avatar" | "info";
 
 // Ratio
-export type Ratio = "1x1" | "1x2" | "3x2" | "3x4" | "4x3" | "9x16" | "16x9" | "16x10";
+export type Ratio =
+	| "1x1"
+	| "1x2"
+	| "3x2"
+	| "3x4"
+	| "4x3"
+	| "9x16"
+	| "16x9"
+	| "16x10";
 
 // Size
-export type Size = "tiny" | "small" | "medium" | "large" | "large-x" | "large-xx" | "large-xxx";
+export type Size =
+	| "tiny"
+	| "small"
+	| "medium"
+	| "large"
+	| "large-x"
+	| "large-xx"
+	| "large-xxx";
 // Size plus
-export type SizePlus = "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "xxxl" | "o-xxxl" | "xo-xxxl";
+export type SizePlus =
+	| "xs"
+	| "sm"
+	| "md"
+	| "lg"
+	| "xl"
+	| "xxl"
+	| "xxxl"
+	| "o-xxxl"
+	| "xo-xxxl";
+// Status
+export type Status =
+	| { status: "idle" }
+	| { status: "loading" }
+	| { status: "success"; data: DataType }
+	| { status: "error"; error: "Error" };

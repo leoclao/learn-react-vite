@@ -37,9 +37,11 @@ function FieldBase({
 	return (
 		<div className={clsx(styles.base, className)}>
 			<div className={styles.container}>
-				{label &&
-					<label className={styles.Label} htmlFor={id}>{label}</label>
-				}
+				{label && (
+					<label className={styles.Label} htmlFor={id}>
+						{label}
+					</label>
+				)}
 				<input
 					id={id}
 					placeholder={placeHolder}

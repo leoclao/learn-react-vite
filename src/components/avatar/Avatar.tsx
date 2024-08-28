@@ -13,55 +13,55 @@ import clsx from "clsx";
 import { useEffect, useState } from "react";
 
 interface Props {
-  className?: string;
-  size?: Size;
-  ratio?: Ratio;
-  src?: string;
-  alt?: string;
-  title?: string;
-  longdesc?: string;
-  ariaDescribedby?: string;
+	className?: string;
+	size?: Size;
+	ratio?: Ratio;
+	src?: string;
+	alt?: string;
+	title?: string;
+	longdesc?: string;
+	ariaDescribedby?: string;
 }
 
 function Avatar({
-  className,
-  size,
-  ratio,
-  src,
-  alt,
-  title,
-  longdesc,
-  ariaDescribedby,
+	className,
+	size,
+	ratio,
+	src,
+	alt,
+	title,
+	longdesc,
+	ariaDescribedby,
 }: Props) {
-  const [newSize, setNewSize] = useState("");
-  const [newRatio, setNewRatio] = useState("");
+	const [newSize, setNewSize] = useState("");
+	const [newRatio, setNewRatio] = useState("");
 
-  useEffect(() => {
-    if (size !== undefined) setNewSize(size);
-    if (ratio !== undefined) setNewRatio(ratio);
-  });
-  // const newSrc = () => {
-  //   src.map((item) => {
-  //     console.log(buildImageUrl(item));
-  //   })
-  // }
-  // src.map((item) => {
-  //   console.log(buildImageUrl(item.domain));
-  // })
+	useEffect(() => {
+		if (size !== undefined) setNewSize(size);
+		if (ratio !== undefined) setNewRatio(ratio);
+	});
+	// const newSrc = () => {
+	//   src.map((item) => {
+	//     console.log(buildImageUrl(item));
+	//   })
+	// }
+	// src.map((item) => {
+	//   console.log(buildImageUrl(item.domain));
+	// })
 
-  return (
-    <div
-      className={clsx(styles.base, className, styles[`${newSize}${newRatio}`])}
-    >
-      <img
-        src={buildImageUrl(src[0])}
-        alt={alt}
-        title={title}
-        longdesc={longdesc}
-        aria-describedby={ariaDescribedby}
-      />
-    </div>
-  );
+	return (
+		<div
+			className={clsx(styles.base, className, styles[`${newSize}${newRatio}`])}
+		>
+			<img
+				src={buildImageUrl(src[0])}
+				alt={alt}
+				title={title}
+				longdesc={longdesc}
+				aria-describedby={ariaDescribedby}
+			/>
+		</div>
+	);
 }
 
 export default Avatar;
