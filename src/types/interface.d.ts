@@ -3,3 +3,13 @@ export interface compProps {
 	theme?: string;
 	size?: string;
 }
+
+// types.ts or Product.ts
+export interface Product {
+	id: string;
+	inStock: boolean;
+	name: string;
+	price: number;
+	promotion?: number;
+	category?: string;
+}

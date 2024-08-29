@@ -1,13 +1,5 @@
 import styles from "@/styles/modules/avatar.module.scss";
-/**
- * The Avatar component in TypeScript React renders an image with optional attributes like size,
- * source, alt text, title, long description, and ARIA describedby.
- * @param {Props}  - The `Avatar` component takes the following props:
- * @returns The Avatar component is being returned, which is a functional component that renders an
- * image inside a div element with optional props such as className, size, src, alt, title, longdesc,
- * and ariaDescribedby.
- */
-import type { Ratio, Size } from "@/utils";
+import type { Ratio, Size } from "@/types/type";
 import buildImageUrl from "@/utils/build-img-url";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
@@ -39,7 +31,7 @@ function Avatar({
 	useEffect(() => {
 		if (size !== undefined) setNewSize(size);
 		if (ratio !== undefined) setNewRatio(ratio);
-	});
+	}, [size, ratio]);
 	// const newSrc = () => {
 	//   src.map((item) => {
 	//     console.log(buildImageUrl(item));
@@ -53,13 +45,13 @@ function Avatar({
 		<div
 			className={clsx(styles.base, className, styles[`${newSize}${newRatio}`])}
 		>
-			<img
+			{src && (<img
 				src={buildImageUrl(src[0])}
 				alt={alt}
 				title={title}
-				longdesc={longdesc}
+				data-longdesc={longdesc}
 				aria-describedby={ariaDescribedby}
-			/>
+			/>)}
 		</div>
 	);
 }

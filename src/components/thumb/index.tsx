@@ -1,4 +1,4 @@
-import type { compProps } from "@/types";
+import type { compProps } from "@/types/interface";
 
 interface Props extends compProps {
 	ratio?: string;

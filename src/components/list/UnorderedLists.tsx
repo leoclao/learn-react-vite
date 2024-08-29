@@ -1,24 +1,20 @@
-/**
- * The UnorderedLists component in TypeScript React renders an unordered list with specified markers
- * and list items.
- * @param {Props}  - The `UnorderedLists` component you provided is a React functional component that
- * renders an unordered list based on the provided data array. Here is an explanation of the
- * parameters:
- * @returns The `UnorderedLists` component is being returned. It takes in props such as className,
- * itemClassName, marker, and data, and renders an unordered list (`<ul>`) with list items (`<li>`)
- * based on the data provided. The marker type for the list items is determined based on the value of
- * the `marker` prop. The component also handles cases where the data is
- */
 import styles from "@/styles/modules/lists.module.scss";
-import type { UnorderedListMarker } from "@/utils";
+import type { UnorderedListMarker } from "@/types/type";
 import clsx from "clsx";
 import ListItem from "./ListItem";
+
+interface DataItem {
+	id: string;
+	term?: string;
+	title?: string;
+	describes: string;
+}
 
 interface Props {
 	className?: string;
 	itemClassName?: string;
 	marker: UnorderedListMarker;
-	data: Array;
+	data: Array<DataItem>;
 }
 
 function UnorderedLists({

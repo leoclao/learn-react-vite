@@ -1,27 +1,39 @@
-import { type MediaType, Ratio } from "@/utils";
-import clsx from "clsx";
-// CardMedia
-import type React from "react";
+import type { MediaType, Ratio } from "@/types/type";
 
-interface Props {
+interface cardMediaProps {
 	className?: string;
-	ratio?: string;
+	ratio?: Ratio;
 	type?: MediaType;
-	url?: string;
+	src?: string;
 	desc?: string;
+	captionsSrc?: string;
+	captionsLang?: string;
+	captionsLabel?: string;
+	autoPlay?: boolean;
 }
 
-function CardMedia({ className, ratio, type = "image" }: Props) {
+function CardMedia({ className, ratio, type, src, desc, captionsSrc, captionsLang, captionsLabel, autoPlay }: cardMediaProps) {
 	const mediaDom = () => {
 		switch (type) {
 			case "image":
-				return <img className={ratio} src={url} alt={desc} />;
+				return <img className={ratio} src={src} alt={desc} />;
 			case "video":
-				return <video autoPlay {...props} />;
+				return (
+					// biome-ignore lint/a11y/useMediaCaption: <explanation>
+					<video autoPlay={autoPlay} src={src}>
+						{captionsSrc && (
+							<track kind="captions" src={captionsSrc} srcLang={captionsLang} label={captionsLabel} />
+						)}
+					</video>
+				);
 			case "audio":
 				return (
-					<audio>
-						<track kind="captions" {...props} />
+					// biome-ignore lint/a11y/useMediaCaption: <explanation>
+					<audio controls>
+						<source src={src} />
+						{captionsSrc && (
+							<track kind="captions" src={captionsSrc} srcLang={captionsLang} label={captionsLabel} />
+						)}
 					</audio>
 				);
 			default:
@@ -29,7 +41,7 @@ function CardMedia({ className, ratio, type = "image" }: Props) {
 		}
 	};
 
-	return <div className={className}>{mediaDom}</div>;
+	return <div className={className}>{mediaDom()}</div>;
 }
 
 export default CardMedia;

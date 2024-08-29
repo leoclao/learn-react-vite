@@ -1,4 +1,4 @@
-import type { ButtonSize } from "@/utils";
+import type { Size } from "@/types/type";
 import clsx from "clsx";
 import type React from "react";
 
@@ -9,7 +9,7 @@ interface Props {
 	hollow: boolean;
 	label?: string;
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
-	size: ButtonSize;
+	size: Size;
 	title: string;
 }
 
@@ -25,6 +25,7 @@ function Button({
 		styles.base,
 		styles[`${size}`],
 		hollow && styles.hollow,
+		className
 	);
 
 	return (
