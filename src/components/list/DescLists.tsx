@@ -1,12 +1,16 @@
-/* The code snippet provided is a TypeScript React component named `DescLists`. Here is a breakdown of
-what the code is doing: */
-import type { OrderedListType } from "@/utils";
 import DescItem from "./DescItem";
+
+interface DataItem {
+	id: string;
+	term?: string;
+	title?: string;
+	describes: string;
+}
 
 interface Props {
 	className?: string;
 	itemClassName?: string;
-	data: Array;
+	data: Array<DataItem>;
 }
 
 function DescLists({ className, itemClassName, data }: Props) {

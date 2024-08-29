@@ -1,13 +1,9 @@
-import { Avatar, Card, Grid } from "@/components";
+import { Avatar, Card } from "@/components";
 import styles from "@/styles/modules/profile.module.scss";
 import type Hide from "@/utils";
 import clsx from "clsx";
 import { useId, useState } from "react";
 import Info from "./info";
-
-type IsShowFull = Hide extends { [K in keyof HTMLVideoElement]: false }
-	? true
-	: false;
 
 interface Props {
 	className?: string;
@@ -15,14 +11,6 @@ interface Props {
 	showInfo?: boolean;
 }
 
-/**
- * Profile component to display user profile information.
- *
- * @param {string} className - Additional CSS class for styling.
- * @param {object} profileData - Object containing user profile data.
- * @param {boolean} showInfo - Flag to determine if additional info should be displayed.
- * @returns {JSX.Element} Rendered Profile component.
- */
 function Profile({ className, profileData, showInfo = false }: Props) {
 	const [filterText, setFilterText] = useState("");
 

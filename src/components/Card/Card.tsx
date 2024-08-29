@@ -1,5 +1,4 @@
-// Card
-import type { ObjectLayout } from "@/utils";
+import clsx from "clsx";
 import type React from "react";
 
 import styles from "@/styles/modules/card.module.scss";
@@ -29,7 +28,7 @@ function Card({ className, children }: Props) {
 	//   }
 	// }
 
-	return <article className={className}>{children}</article>;
+	return <article className={clsx(styles.Base, className)}>{children}</article>;
 }
 
 export default Card;

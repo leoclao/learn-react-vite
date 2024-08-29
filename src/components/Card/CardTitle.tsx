@@ -1,5 +1,4 @@
-// CardTitle
-import type React from "react";
+import type { HeadingSize } from "@/types/type";
 
 interface Props {
 	className?: string;
@@ -8,7 +7,7 @@ interface Props {
 }
 
 function CardTitle({ className, title, size = "h4" }: Props) {
-	const setSize = () => {
+	const Heading = () => {
 		switch (size) {
 			case "h1":
 				return <h1 className={className}>{title}</h1>;
@@ -25,7 +24,7 @@ function CardTitle({ className, title, size = "h4" }: Props) {
 		}
 	};
 
-	return setSize;
+	return Heading;
 }
 
 export default CardTitle;

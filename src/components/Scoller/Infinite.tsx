@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
 function ScrollInfinite() {
 	const [count, setCount] = useState(0);

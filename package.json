@@ -14,22 +14,22 @@
 		"preview": "vite preview"
 	},
 	"lint-staged": {
-			"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
-				"biome check --files-ignore-unknown=true",
-				"biome check --write --no-errors-on-unmatched",
-				"biome check --write --organize-imports-enabled=false --no-errors-on-unmatched",
-				"biome check --write --unsafe --no-errors-on-unmatched",
-				"biome format --write --no-errors-on-unmatched",
-				"biome lint --write --no-errors-on-unmatched"
-			],
-			"*": [
-				"biome check --no-errors-on-unmatched --files-ignore-unknown=true"
-			]
-		},
+		"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+			"biome check --files-ignore-unknown=true",
+			"biome check --write --no-errors-on-unmatched",
+			"biome check --write --organize-imports-enabled=false --no-errors-on-unmatched",
+			"biome check --write --unsafe --no-errors-on-unmatched",
+			"biome format --write --no-errors-on-unmatched",
+			"biome lint --write --no-errors-on-unmatched"
+		],
+		"*": [
+			"biome check --no-errors-on-unmatched --files-ignore-unknown=true"
+		]
+	},
 	"dependencies": {
 		"clsx": "^2.1.1",
-		"react": "19.0.0-beta-26f2496093-20240514",
-		"react-dom": "19.0.0-beta-26f2496093-20240514",
+		"react": "19.0.0-rc-fb9a90fa48-20240614",
+		"react-dom": "19.0.0-rc-fb9a90fa48-20240614",
 		"react-error-boundary": "^4.0.13",
 		"react-hook-form": "^7.53.0",
 		"react-responsive": "^10.0.0",
@@ -38,11 +38,12 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
+		"@types/node": "^22.5.1",
 		"@types/react": "^18.3.4",
 		"@types/react-dom": "^18.3.0",
 		"@vitejs/plugin-react": "^4.3.1",
 		"i": "^0.3.7",
-		"npm": "^10.8.2",
+		"npm": "^10.8.3",
 		"typedoc": "^0.26.6",
 		"typescript": "^5.5.4",
 		"vite": "^5.4.2"

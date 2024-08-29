@@ -1,18 +1,16 @@
 import useDebounce from "@/hooks/useDebounce";
 import styles from "@/styles/modules/product.module.scss";
+import type { Product } from "@/types/interface";
 import clsx from "clsx";
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Board from "./Board";
 import SearchBar from "./SearchBar";
 
-/**
- * FilterableProduct component displays a filterable list of products with search and in-stock filter options.
- *
- * @param {Object[]} products - The array of products to display.
- *
- * @returns {JSX.Element} A React component that renders a filterable product list.
- */
-function FilterableProduct({ products }) {
+interface FilterableProductProps {
+	products: Product[];
+}
+
+function FilterableProduct({ products }: FilterableProductProps) {
 	const [filterText, setFilterText] = useState("");
 	const [inStockOnly, setInStockOnly] = useState(false);
 	const debounceValue = useDebounce(filterText, 500);

@@ -1,5 +1,5 @@
 import styles from "@/styles/modules/field.module.scss";
-import type { Size } from "@/utils";
+import type { Size } from "@/types/type";
 import clsx from "clsx";
 import Message from "../Message";
 
