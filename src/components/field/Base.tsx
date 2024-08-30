@@ -1,19 +1,20 @@
+import { sizeMapping } from "@/constants/mapping";
 import styles from "@/styles/modules/field.module.scss";
-import type { Size } from "@/types/type";
+import type { MessageType, Size } from "@/types/type";
 import clsx from "clsx";
 import Message from "../Message";
 
 interface Props {
 	label?: string;
 	className?: string;
-	size?: Size;
+	size: Size;
 	id?: string;
 	placeHolder?: string;
 	type?: string;
 	value?: string;
 	alt?: string;
 	inputRef?: React.RefObject<HTMLInputElement>;
-	msType?: string;
+	msType?: MessageType;
 	msContent?: string;
 	onChange?: React.ChangeEventHandler<HTMLInputElement>;
 	required?: boolean;
@@ -22,7 +23,7 @@ interface Props {
 function FieldBase({
 	label,
 	className,
-	size = "medium",
+	size,
 	id,
 	placeHolder = "Input placeholder",
 	type = "text",
@@ -34,8 +35,9 @@ function FieldBase({
 	onChange,
 	required = false,
 }: Props) {
+	const newSize = (key: Size) => sizeMapping[key] || "Medium";
 	return (
-		<div className={clsx(styles.base, className)}>
+		<div className={clsx(styles.base, size && styles[`${newSize(size)}`], className)}>
 			<div className={styles.container}>
 				{label && (
 					<label className={styles.Label} htmlFor={id}>
@@ -52,7 +54,7 @@ function FieldBase({
 					onChange={onChange}
 				/>
 			</div>
-			{msContent && <Message types={msType} content={msContent} />}
+			{msContent && msType && <Message types={msType} content={msContent} />}
 		</div>
 	);
 }

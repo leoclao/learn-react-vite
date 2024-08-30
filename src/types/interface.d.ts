@@ -1,7 +1,6 @@
 export interface compProps {
 	className?: string;
-	theme?: string;
-	size?: string;
+	customStyle: string;
 }
 
 // types.ts or Product.ts
