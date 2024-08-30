@@ -23,3 +23,14 @@ export const statusMapping = {
 	error: "Error",
 	info: "Info",
 };
+
+export const ratioMapping = {
+	"1x1": "1x1",
+	"1x2": "1x2",
+	"3x2": "3x2",
+	"3x4": "3x4",
+	"4x3": "4x3",
+	"9x16": "9x16",
+	"16x9": "16x9",
+	"16x10": "16x10"
+};

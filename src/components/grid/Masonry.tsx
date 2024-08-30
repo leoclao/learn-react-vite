@@ -1,7 +1,6 @@
+import styles from "@/styles/modules/grid.module.scss";
 import clsx from "clsx";
 import { useId } from "react";
-
-import styles from "@/styles/modules/grid.module.scss";
 
 interface Props {
 	cols?: string;
@@ -14,8 +13,6 @@ function Masonry({ cols, gap, children }: Props) {
 	const newMasonryClass = "masonry";
 	const newGapClass = gap ? `Gap${gap}` : "Gap";
 	const newColsClass = cols ? `Cols${cols}` : "Cols";
-
-	console.log(styles[`masonry${newGapClass}`]);
 
 	const className = clsx(
 		styles[newMasonryClass],
