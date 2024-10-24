@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 type Item = {
 	id: number;
 	name: string;
-}
+};
 function ScrollInfinite() {
 	// const [count, setCount] = useState(0);
 	const [items, setItems] = useState<Item[]>([]);
@@ -29,17 +29,17 @@ function ScrollInfinite() {
 		}
 
 		return () => {
-			if(pageEndRef.current) {
+			if (pageEndRef.current) {
 				observer.unobserve(pageEndRef.current);
 			}
-		}
+		};
 	}, []);
 
 	useEffect(() => {
 		if (isFetchingMore) {
 			fetchMore();
 		}
-	}, [isFetchingMore, fetchMore])
+	}, [isFetchingMore, fetchMore]);
 
 	return (
 		<div>

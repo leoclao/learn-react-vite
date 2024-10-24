@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 type Props = {
 	product: Product;
-}
+};
 
 function ProductItem({ product }: Props) {
 	const name = product.inStock ? (

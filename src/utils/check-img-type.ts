@@ -1,13 +1,7 @@
-/**
- * Asynchronous function to check the type of an image from a given source URL.
- * @param {Object} src - The URL source of the image to check.
- * @returns {string} The content type of the image fetched from the source URL.
- */
-
 import React, { useState, useEffect } from "react";
 
-export default function checkImageType({ src }) {
-	const [imageType, setImageType] = useState(null);
+export default function checkImageType({ src }: { src: string}) {
+	const [imageType, setImageType] = useState<string | null>(null);
 
 	useEffect(() => {
 		const checkImageType = async () => {

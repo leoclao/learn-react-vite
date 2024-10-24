@@ -1,4 +1,4 @@
-import type { OrderedListType } from "@/types/type";
+import type { OrderedListType } from "../../types";
 import ListItem from "./ListItem";
 
 interface DataItem {
@@ -27,14 +27,16 @@ function OrderedLists({
 		return console.error("List is not null or undefined");
 	}
 
-	const startNumber = typeof start === 'string' ? Number.parseInt(start, 10) : start;
+	const startNumber =
+		typeof start === "string" ? Number.parseInt(start, 10) : start;
 
-	const items = data.map((item) => (
+	const items = data.map((item) =>
 		item.title ? (
 			<ListItem key={item.id} id={item.id} className={itemClassName}>
-				{item.title}</ListItem>
-		) : null
-	));
+				{item.title}
+			</ListItem>
+		) : null,
+	);
 
 	return (
 		<ol type={type} start={startNumber} className={className}>

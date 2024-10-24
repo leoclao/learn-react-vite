@@ -22,7 +22,7 @@ function Board({ products, filterText, inStockOnly }: BoardProps) {
 		if (inStockOnly && !product.inStock) {
 			continue;
 		}
-		
+
 		const category = product.category ?? "Uncategorized";
 
 		if (category !== lastCategory) {

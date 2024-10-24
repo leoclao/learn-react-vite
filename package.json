@@ -10,7 +10,7 @@
 		"format": "biome format --write src",
 		"lint": "biome lint src",
 		"check": "biome check src",
-		"fix": "biome fix format --write src",
+		"fix": "biome fix --write src",
 		"preview": "vite preview"
 	},
 	"lint-staged": {

@@ -1,8 +1,7 @@
 interface CategoryProps {
-  category: string;
-  className?: string;
+	category: string;
+	className?: string;
 }
-
 
 function Category({ category, className }: CategoryProps) {
 	return <div className={className}>{category}</div>;

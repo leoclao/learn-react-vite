@@ -1,4 +1,4 @@
-export interface compProps {
+export interface compBaseProps {
 	className?: string;
 	customStyle: string;
 }

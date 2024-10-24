@@ -3,7 +3,7 @@
  * @param {object} url - The URL object containing domain, directory, id, size, name, format, and query parameters.
  * @returns {string} The final image URL with all parameters included.
  */
-export default function buildImageUrl(url) {
+export default function buildImageUrl(url: { domain: string; directory: string; id: string; size: number; name: string; format: string; query: { [s: string]: unknown; } | ArrayLike<unknown>; }) {
 	if (!url || !url.domain) {
 		throw new Error("Invalid URL object");
 	}
