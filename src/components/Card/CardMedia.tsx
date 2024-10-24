@@ -12,7 +12,17 @@ interface cardMediaProps {
 	autoPlay?: boolean;
 }
 
-function CardMedia({ className, ratio, type, src, desc, captionsSrc, captionsLang, captionsLabel, autoPlay }: cardMediaProps) {
+function CardMedia({
+	className,
+	ratio,
+	type,
+	src,
+	desc,
+	captionsSrc,
+	captionsLang,
+	captionsLabel,
+	autoPlay,
+}: cardMediaProps) {
 	const mediaDom = () => {
 		switch (type) {
 			case "image":
@@ -22,7 +32,12 @@ function CardMedia({ className, ratio, type, src, desc, captionsSrc, captionsLan
 					// biome-ignore lint/a11y/useMediaCaption: <explanation>
 					<video autoPlay={autoPlay} src={src}>
 						{captionsSrc && (
-							<track kind="captions" src={captionsSrc} srcLang={captionsLang} label={captionsLabel} />
+							<track
+								kind="captions"
+								src={captionsSrc}
+								srcLang={captionsLang}
+								label={captionsLabel}
+							/>
 						)}
 					</video>
 				);
@@ -32,7 +47,12 @@ function CardMedia({ className, ratio, type, src, desc, captionsSrc, captionsLan
 					<audio controls>
 						<source src={src} />
 						{captionsSrc && (
-							<track kind="captions" src={captionsSrc} srcLang={captionsLang} label={captionsLabel} />
+							<track
+								kind="captions"
+								src={captionsSrc}
+								srcLang={captionsLang}
+								label={captionsLabel}
+							/>
 						)}
 					</audio>
 				);

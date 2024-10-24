@@ -1,6 +1,6 @@
 import styles from "@/styles/modules/avatar.module.scss";
-import type { Ratio, Size } from "@/types/type";
-import buildImageUrl from "@/utils/build-img-url";
+import type { Ratio, Size } from "@/types";
+import buildImageUrl from "@/utils";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 
@@ -45,13 +45,15 @@ function Avatar({
 		<div
 			className={clsx(styles.base, className, styles[`${newSize}${newRatio}`])}
 		>
-			{src && (<img
-				src={buildImageUrl(src[0])}
-				alt={alt}
-				title={title}
-				data-longdesc={longdesc}
-				aria-describedby={ariaDescribedby}
-			/>)}
+			{src && (
+				<img
+					src={buildImageUrl(src[0])}
+					alt={alt}
+					title={title}
+					data-longdesc={longdesc}
+					aria-describedby={ariaDescribedby}
+				/>
+			)}
 		</div>
 	);
 }

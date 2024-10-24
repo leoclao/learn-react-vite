@@ -25,36 +25,37 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@/assets/*": [
-        "src/assets/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/constants/*": [
-        "src/constants/*"
-      ],
-      "@/container/*": [
-        "src/container/*"
-      ],
-      "@/features/*": [
-        "src/features/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ],
-      "@/styles/*": [
-        "src/styles/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ]
+      "@/*": ["src/*"]
+      // "@/assets/*": [
+      //   "./assets/*"
+      // ],
+      // "@/components/*": [
+      //   "./components/*"
+      // ],
+      // "@/constants/*": [
+      //   "./constants/*"
+      // ],
+      // "@/container/*": [
+      //   "./container/*"
+      // ],
+      // "@/features/*": [
+      //   "./features/*"
+      // ],
+      // "@/hooks/*": [
+      //   "./hooks/*"
+      // ],
+      // "@/styles/*": [
+      //   "./styles/*"
+      // ],
+      // "@/utils/*": [
+      //   "./utils/*"
+      // ],
+      // "@/types/*": [
+      //   "./types/*"
+      // ]
     }
   },
-  "include": ["src"],
+  "include": ["src/**/*", "tests/**/*"],
   "references": [
     {
       "path": "./tsconfig.node.json"

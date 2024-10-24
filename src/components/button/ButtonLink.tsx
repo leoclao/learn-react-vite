@@ -28,7 +28,7 @@ function ButtonLink({
 		styles.base,
 		styles[`${size}`],
 		hollow && styles.hollow,
-		className
+		className,
 	);
 
 	return (

@@ -37,7 +37,13 @@ function FieldBase({
 }: Props) {
 	const newSize = (key: Size) => sizeMapping[key] || "Medium";
 	return (
-		<div className={clsx(styles.base, size && styles[`${newSize(size)}`], className)}>
+		<div
+			className={clsx(
+				styles.base,
+				size && styles[`${newSize(size)}`],
+				className,
+			)}
+		>
 			<div className={styles.container}>
 				{label && (
 					<label className={styles.Label} htmlFor={id}>

@@ -13,6 +13,6 @@ const ListItem: React.FC<ListItemProps> = ({ className, id, children }) => {
 			{children}
 		</li>
 	);
-}
+};
 
 export default ListItem;

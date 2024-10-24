@@ -32,7 +32,8 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true
-		}
+		},
+    "ignore": ["tests"]
 	},
 	"vcs": {
 		"enabled": true,

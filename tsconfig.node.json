@@ -6,11 +6,13 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
   },
   "include": [
     "vite.config.js",
     "**/*.js",
-    "**/*.ts"
+    "**/*.ts",
+    "src",
   ]
 }

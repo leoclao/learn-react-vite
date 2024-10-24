@@ -25,7 +25,7 @@ function Button({
 		styles.base,
 		styles[`${size}`],
 		hollow && styles.hollow,
-		className
+		className,
 	);
 
 	return (
