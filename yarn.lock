@@ -2450,7 +2450,7 @@ __metadata:
     npm: ^10.8.3
     react: 19.0.0-rc-fb9a90fa48-20240614
     react-dom: 19.0.0-rc-fb9a90fa48-20240614
-    react-error-boundary: ^4.0.13
+    react-error-boundary: ^4.1.2
     react-hook-form: ^7.53.0
     react-responsive: ^10.0.0
     sass: ^1.80.6
@@ -3520,14 +3520,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-error-boundary@npm:^4.0.13":
-  version: 4.0.13
-  resolution: "react-error-boundary@npm:4.0.13"
+"react-error-boundary@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "react-error-boundary@npm:4.1.2"
   dependencies:
-    "@babel/runtime": "npm:^7.12.5"
+    "@babel/runtime": ^7.12.5
   peerDependencies:
     react: ">=16.13.1"
-  checksum: 6f3e0e4d7669f680ccf49c08c9571519c6e31f04dcfc30a765a7136c7e6fbbbe93423dd5a9fce12107f8166e54133e9dd5c2079a00c7a38201ac811f7a28b8e7
+  checksum: 8/afe692f1bbbfb5998b49e1001d7682a3cbfdc623dca1318b408e738606f3450d925c28fbbfa5dc84d2cf285d17c2e7f079d59386a27da354dea9c902a935149b
   languageName: node
   linkType: hard
 
